@@ -12,11 +12,14 @@ export function MemoryMap({ onOpenMemory }: { onOpenMemory?: (id: string) => voi
   // constellation edges: each node links to the centre or to its neighbour
   const edges = useMemo(
     () =>
-      memories.map((m, i) => ({
-        from: i === 0 ? { x: 0, y: 0 } : { x: memories[i - 1].x, y: memories[i - 1].y },
-        to: { x: m.x, y: m.y },
-        delay: i * 0.25,
-      })),
+      memories.map((m, i) => {
+        const prev = memories[i - 1];
+        return {
+          from: prev ? { x: prev.x, y: prev.y } : { x: 0, y: 0 },
+          to: { x: m.x, y: m.y },
+          delay: i * 0.25,
+        };
+      }),
     [memories],
   );
 
