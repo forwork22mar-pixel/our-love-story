@@ -126,20 +126,19 @@ export const CONFIG = {
 
   /* ----------------------------------------------------- CHAPTER 4 MEMORY MAP */
   memories: [
-    { id: "meet", type: "FIRST MEET", title: "[TITLE]", date: "[DATE]", description: "[MEMORY DESCRIPTION]", image: "/images/first-meet.jpg", icon: "✦", x: -62, y: -38 },
-    { id: "talk", type: "FIRST TALK", title: "[TITLE]", date: "[DATE]", description: "[MEMORY DESCRIPTION]", image: "/images/first-talk.jpg", icon: "✧", x: -24, y: -66 },
-    { id: "hug", type: "FIRST HUG", title: "[TITLE]", date: "[DATE]", description: "[MEMORY DESCRIPTION]", image: "/images/first-hug.jpg", icon: "❤", x: 22, y: -58 },
-    { id: "photo", type: "FIRST PHOTO", title: "[TITLE]", date: "[DATE]", description: "[MEMORY DESCRIPTION]", image: "/images/first-photo.jpg", icon: "◎", x: 60, y: -34 },
-    { id: "date", type: "FIRST DATE", title: "[TITLE]", date: "[DATE]", description: "[MEMORY DESCRIPTION]", icon: "✦", x: 78, y: 6 },
-    { id: "call", type: "FIRST CALL", title: "[TITLE]", date: "[DATE]", description: "[MEMORY DESCRIPTION]", icon: "☾", x: 56, y: 44 },
-    { id: "laugh", type: "FIRST LAUGH", title: "[TITLE]", date: "[DATE]", description: "[MEMORY DESCRIPTION]", icon: "✧", x: 18, y: 66 },
-    { id: "trip", type: "FIRST TRIP", title: "[TITLE]", date: "[DATE]", description: "[MEMORY DESCRIPTION]", icon: "✈", x: -26, y: 62 },
-    { id: "gift", type: "FIRST GIFT", title: "[TITLE]", date: "[DATE]", description: "[MEMORY DESCRIPTION]", icon: "✦", x: -64, y: 34 },
-    { id: "favorite", type: "FAVORITE MEMORY", title: "[TITLE]", date: "[DATE]", description: "[MEMORY DESCRIPTION]", icon: "★", x: -80, y: -4 },
-    { id: "funniest", type: "FUNNIEST MOMENT", title: "[TITLE]", date: "[DATE]", description: "[MEMORY DESCRIPTION]", icon: "✧", x: -8, y: -22 },
-    { id: "random", type: "MOST RANDOM MOMENT", title: "[TITLE]", date: "[DATE]", description: "[MEMORY DESCRIPTION]", icon: "✦", x: 34, y: 18 },
-    { id: "never-forget", type: "A MOMENT I NEVER WANT TO FORGET", title: "[TITLE]", date: "[DATE]", description: "[MEMORY DESCRIPTION]", icon: "❤", x: -34, y: 14 },
-    { id: "today", type: "TODAY", title: "[TITLE]", date: "[DATE]", description: "[MEMORY DESCRIPTION]", icon: "☀", x: 6, y: 40 },
+    { id: "meet", type: "FIRST MEET", title: "THE FIRST TIME WE SAW EACHOTHER!", date: "19th MAY 2026", description: "THE MOEMENT WE SAW EACHOTHER AND THAT MOMENT JUST FREZZED FOR US (FOREVER AND EVER ..)", image: "/images/saw.png", icon: "✦", x: -62, y: -38 },
+    { id: "talk", type: "FIRST TALK", title: "THE FIRST TIME I GET TO HEAR YOU!", date: "IN 5th GRADE", description: "i Don't remember it but i know it would be soo cute you taling to the stupid suri in 5 standard .I was lil shy  towards girl but for you hopefully i was this SURI!", image: "/images/first-talk.jpg.png", icon: "✧", x: -24, y: -66 },
+    { id: "hug", type: "FIRST HUG", title: "THE MOMENT YOU SOUL TOUCHED MINE ", date: "19th MAY 2026", description: "[There are some moments you remember without trying. This is one of them. The first time I hugged you, everything somehow felt a little quieter, a little warmer, and a lot more special.]", image: "/images/first-meet.jpg.png", icon: "❤", x: 22, y: -58 },
+    { id: "photo", type: "FIRST PHOTO", title: "The first time that phone captured our moment. ", date: "19th MAY 2026", description: "The beginning of a collection of moments I would never want to forget. And somehow, every picture with you still feels like my favorite one.", image: "/images/thefirstclick.jpg.png", icon: "◎", x: 60, y: -34 },
+    { id: "auto", type: "FIRST AUTO RIDE!", title: "THE AUTO RIDE WITH YOU ", date: "19th MAY 2026", description: "The moment we sat on that auto and have that ride where you hold my arms for the first time and also pinched yourself".",image: "/images/auto.jpg.png", icon: "✦", x: 78, y: 6 },
+    { id: "call", type: "FIRST CALL", title: "THE FIRST CALL!", description: "The first call... Aah I remember how you weren't able to speak up on the call I tried to talk 😂.. But yesss core memory baby 😋", icon: "☾", x: 56, y: 44 },
+  
+    { id: " YOUR gift", type: "YOUR FIRST GIFT!", title: "YOUR FIRST GIFT", date: "26th MARCH 2025", description: "The first time I tried to gift you something that Harry Potter box 😭😭aaa.. We had a fight after that but it reached you safely ache se.. 💓😘", icon: "✦", x: -64, y: 34 },
+    
+    { id: "funniest", type: "FUNNIEST MOMENT", title: "FUNNY MOMENTS ", date: "31st FEB", description: "CAN'T BE ONE NEVER WILL BE .. JAB I HAVE MY COMEDIAN GF WITH ME IT IS IMPODDIBLE TO HAVE ONE FUNNY MOMENT THAT'S WHY 31st  FEB (CAN'T BE DATED.)", icon: "✧", x: -8, y: -22 },
+    { id: "random", type: "MOST RANDOM MOMENT", title: "THE RANDOM CLICK ", date: "[DATE]", description: "TO ALL THE HATTERS OF OUR . JO JO NAZAR LAGANE KI KOSHIH KARTE HAI UNKE LIYA HAI YE .","/images/fuck.jpg.png", icon: "✦", x: 34, y: 18 },
+   
+    { id: "today", type: "TODAY", title: "HAPPIEST BIRTHDAY BABYGIRL❤️😘😘😍😍", date: "4th SEP 2026", description: "THE BITRTHDAY, YOU ENTERED INTO ADULTHOOD ,FINALLY A AUNTY AND HOPEFULLY MY WIFEY ONE DAY YOU WILL BABY, ENJOY YOU DAY I LOVEEEEEEEEE YOUUUU SOOOOOO MUCH😘😘😘 ", icon: "☀", x: 6, y: 40 },
   ] as Memory[],
 
   /* ------------------------------------------------------- CHAPTER 5 FIRSTS */
@@ -150,8 +149,8 @@ export const CONFIG = {
     { title: "Our First Photo", date: "[DATE]", story: "[STORY]", image: "/images/first-photo.jpg" },
     { title: "Our First Call", date: "[DATE]", story: "[STORY]" },
     { title: "Our First Date", date: "[DATE]", story: "[STORY]" },
-    { title: "Our First Trip", date: "[DATE]", story: "[STORY]" },
-    { title: "Our First Gift", date: "[DATE]", story: "[STORY]" },
+    
+    { title: "Your First Gift", date: "[DATE]", story: "[STORY]" },
     { title: 'Our First "I Love You"', date: "[DATE]", story: "[STORY]" },
   ] as FirstMoment[],
 
