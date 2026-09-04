@@ -136,7 +136,7 @@ export const CONFIG = {
     { id: " YOUR gift", type: "YOUR FIRST GIFT!", title: "YOUR FIRST GIFT", date: "26th MARCH 2025", description: "The first time I tried to gift you something that Harry Potter box 😭😭aaa.. We had a fight after that but it reached you safely ache se.. 💓😘", icon: "✦", x: -64, y: 34 },
     
     { id: "funniest", type: "FUNNIEST MOMENT", title: "FUNNY MOMENTS ", date: "31st FEB", description: "CAN'T BE ONE NEVER WILL BE .. JAB I HAVE MY COMEDIAN GF WITH ME IT IS IMPODDIBLE TO HAVE ONE FUNNY MOMENT THAT'S WHY 31st  FEB (CAN'T BE DATED.)", icon: "✧", x: -8, y: -22 },
-    { id: "random", type: "MOST RANDOM MOMENT", title: "THE RANDOM CLICK ", date: "[DATE]", description: "TO ALL THE HATTERS OF OUR . JO JO NAZAR LAGANE KI KOSHIH KARTE HAI UNKE LIYA HAI YE .","/images/fuck.jpg.png", icon: "✦", x: 34, y: 18 },
+    { id: "random", type: "MOST RANDOM MOMENT", title: "THE RANDOM CLICK ", description: "TO ALL THE HATTERS OF OUR . JO JO NAZAR LAGANE KI KOSHIH KARTE HAI UNKE LIYA HAI YE .",image: "/images/fuck.jpg.png", icon: "✦", x: 34, y: 18 },
    
     { id: "today", type: "TODAY", title: "HAPPIEST BIRTHDAY BABYGIRL❤️😘😘😍😍", date: "4th SEP 2026", description: "THE BITRTHDAY, YOU ENTERED INTO ADULTHOOD ,FINALLY A AUNTY AND HOPEFULLY MY WIFEY ONE DAY YOU WILL BABY, ENJOY YOU DAY I LOVEEEEEEEEE YOUUUU SOOOOOO MUCH😘😘😘 ", icon: "☀", x: 6, y: 40 },
   ] as Memory[],
