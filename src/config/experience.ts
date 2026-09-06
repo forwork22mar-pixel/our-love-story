@@ -118,9 +118,9 @@ export const CONFIG = {
     { src: "/images/photo7.jpg", caption: "RANDOMLY LOOKING CUTE😎", shape: "wide" },
     { src: "/images/photo8.jpg", caption: "UHMM SILLY ONE 🤭😝", date: "[DATE]", shape: "tall" },
     { src: "/images/photo9.jpg", caption: "TEASING ONE😏", date: "[DATE]", shape: "square", tilt: 2 },
-    { src: "/images/photo10.jpg", caption: "MY FAV VIEW ❤️", date: "[DATE]", shape: "hero" },
-    { src: "/images/photo11.jpg", caption: "JUST YOU EFFORTLESSLY🤭💕", date: "[DATE]", shape: "square", tilt: -3, polaroid: true },
-    { src: "/images/photo12.jpg", caption: "PRETTIEST ONE😍", date: "[DATE]", shape: "tall" },
+    { src: "/images/photo10.png", caption: "MY FAV VIEW ❤️", date: "[DATE]", shape: "hero" },
+    { src: "/images/photo11.png", caption: "JUST YOU EFFORTLESSLY🤭💕", date: "[DATE]", shape: "square", tilt: -3, polaroid: true },
+    { src: "/images/photo12.png", caption: "PRETTIEST ONE😍", date: "[DATE]", shape: "tall" },
     // ...keep adding, 20–30 photos look best.
   ] as Photo[],
 
