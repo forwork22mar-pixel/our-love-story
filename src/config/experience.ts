@@ -81,8 +81,8 @@ export type HiddenSurprise = {
 
 export const CONFIG = {
   /* ---------------------------------------------------------------- BASICS */
-  herName: "[HER NAME]",
-  birthdayMessage: "Happy Birthday, [HER NAME]",
+  herName: "MY BABY❤️ ",
+  birthdayMessage: "Happy Birthday, MY BABY ",
 
   /* --------------------------------------------------------------- OPENING */
   opening: {
@@ -95,8 +95,8 @@ export const CONFIG = {
   why: {
     title: "Why I made this",
     paragraphs: [
-      "[WRITE WHY YOU MADE THIS — a few honest lines.]",
-      "[SECOND PARAGRAPH — what she means to you, in your own words.]",
+      "CAUSE A BIRTHDAY WISH AND PUTTING YOU ON STORY IS NOT ENOUGH TO SHOW HOW MUCH I LOVE THIS DAY AND HOW MUCH I M BLESSED TO HAVE YOU IN MY LIFE .❤️💕😘🤭",
+      "YOU FUCKINGGGGGG MEAN THE WORLD FOR  ME HONEY , A BABY WHOME I WILL TAKE CARE OF , A DUMBO FOR ME (while you are smarter then me still.). ",
     ],
   },
 
@@ -104,7 +104,7 @@ export const CONFIG = {
   reveal: {
     line1: "Today isn't just another day.",
     line2: "It's your day.",
-    line3: "Happy Birthday, [HER NAME]",
+    line3: "Happy Birthday, MY LOVE ARTI",
   },
 
   /* --------------------------------------------------------- CHAPTER 3 PHOTOS */
@@ -129,6 +129,66 @@ export const CONFIG = {
     { id: "meet", type: "FIRST MEET", title: "THE FIRST TIME WE SAW EACHOTHER!", date: "19th MAY 2026", description: "THE MOEMENT WE SAW EACHOTHER AND THAT MOMENT JUST FREZZED FOR US (FOREVER AND EVER ..)", image: "/images/saw.png", icon: "✦", x: -62, y: -38 },
     { id: "talk", type: "FIRST TALK", title: "THE FIRST TIME I GET TO HEAR YOU!", date: "IN 5th GRADE", description: "i Don't remember it but i know it would be soo cute you taling to the stupid suri in 5 standard .I was lil shy  towards girl but for you hopefully i was this SURI!", icon: "✧", x: -24, y: -66 },
     { id: "hug", type: "FIRST HUG", title: "THE MOMENT YOU SOUL TOUCHED MINE ", date: "19th MAY 2026", description: "[There are some moments you remember without trying. This is one of them. The first time I hugged you, everything somehow felt a little quieter, a little warmer, and a lot more special.]", image: "/images/first-meet.jpg.png", icon: "❤", x: 22, y: -58 },
+    { 
+  id: "kiss", 
+  type: "FIRST KISS", 
+  title: "FIRST KISS❤️", 
+  date: "20th MAY 2026", 
+  description: "The moment your lips touched mine 😭.. All the surrounding was frozen for a min.. We kissed 😭😳for the first time fuckkk it was soo romantic 💞.", 
+  image: "/images/kiss.jpg.png", 
+  icon: "❤", 
+  x: 70, 
+  y: 55 
+},
+
+{ 
+  id: "mall", 
+  type: "MALL MEMORY", 
+  title: "WE IN THAT MALL!", 
+  date: "20th MAY 2026", 
+  description: "We went to mall together and making memories. We ate that domino's pizzza and cold coffee combo 😂. Tujhe khatm karna pada tha... And also those kisses 🤭in those lift 💞", 
+  image: "/images/mall.jpg.png", 
+  icon: "✦", 
+  x: -75, 
+  y: 55 
+},
+
+{ 
+  id: "park", 
+  type: "PARK MEMORY", 
+  title: "JUST WE SITTING IN THE PARK", 
+  date: "YOUR DATE HERE", 
+  description: "We sat on that bench in that Lodhi garden.. 😭we were just talking.. Staring each other constantly.. Those eye contact 😭💞all  printed in my head for life..", 
+  image: "/images/park.jpg.png", 
+  icon: "✧", 
+  x: 75, 
+  y: -55 
+},
+
+{ 
+  id: "random2", 
+  type: "RANDOM MOMENT", 
+  title: "YOUR TITLE HERE", 
+  date: "YOUR DATE HERE", 
+  description: "YOUR DESCRIPTION HERE", 
+  image: "/images/random.jpg.png", 
+  icon: "◎", 
+  x: -75, 
+  y: -5 
+},
+
+{ 
+  id: "confession", 
+  type: "CONFESSION", 
+  title: "THE CONFESSION DAY ", 
+  date: "22th MARCH 2024", 
+  description: 'From here everything changed up soo good and fine 😭 the moment you confessed "I like you"... Fuckkk one of the greatest moment of my life.. But yess I love pehle meine bola tha 😋',
+  image: "/images/confession.jpg.png", 
+  icon: "❤", 
+  x: 35, 
+  y: -75 
+},
+
     { id: "photo", type: "FIRST PHOTO", title: "The first time that phone captured our moment. ", date: "19th MAY 2026", description: "The beginning of a collection of moments I would never want to forget. And somehow, every picture with you still feels like my favorite one.", image: "/images/thefirstclick.jpg", icon: "◎", x: 60, y: -34 },
     { id: "auto", type: "FIRST AUTO RIDE!", title: "THE AUTO RIDE WITH YOU ", date: "19th MAY 2026", description: "The moment we sat on that auto and have that ride where you hold my arms for the first time and also pinched yourself",image: "/images/auto.jpg.png", icon: "✦", x: 78, y: 6 },
     { id: "call", type: "FIRST CALL", title: "THE FIRST CALL!", description: "The first call... Aah I remember how you weren't able to speak up on the call I tried to talk 😂.. But yesss core memory baby 😋", icon: "☾", x: 56, y: 44 },
