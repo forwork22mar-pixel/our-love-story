@@ -109,18 +109,18 @@ export const CONFIG = {
 
   /* --------------------------------------------------------- CHAPTER 3 PHOTOS */
   photos: [
-    { src: "/images/photo1.jpg", caption: "[CAPTION]", date: "[DATE]", location: "[PLACE]", description: "[MEMORY DESCRIPTION]", shape: "hero", tilt: 0 },
-    { src: "/images/photo2.jpg", caption: "[CAPTION]", date: "[DATE]", shape: "tall", tilt: -3, polaroid: true },
-    { src: "/images/photo3.jpg", caption: "[CAPTION]", date: "[DATE]", shape: "square", tilt: 2 },
-    { src: "/images/photo4.jpg", caption: "[CAPTION]", date: "[DATE]", shape: "wide" },
-    { src: "/images/photo5.jpg", caption: "[CAPTION]", date: "[DATE]", shape: "tall", tilt: 3 },
-    { src: "/images/photo6.jpg", caption: "[CAPTION]", date: "[DATE]", shape: "square", tilt: -2, polaroid: true },
-    { src: "/images/photo7.jpg", caption: "[CAPTION]", date: "[DATE]", shape: "wide" },
-    { src: "/images/photo8.jpg", caption: "[CAPTION]", date: "[DATE]", shape: "tall" },
-    { src: "/images/photo9.jpg", caption: "[CAPTION]", date: "[DATE]", shape: "square", tilt: 2 },
-    { src: "/images/photo10.jpg", caption: "[CAPTION]", date: "[DATE]", shape: "hero" },
-    { src: "/images/photo11.jpg", caption: "[CAPTION]", date: "[DATE]", shape: "square", tilt: -3, polaroid: true },
-    { src: "/images/photo12.jpg", caption: "[CAPTION]", date: "[DATE]", shape: "tall" },
+    { src: "/images/photo1.jpg", caption: "HOW YOU ARE EVEN THIS PRETTY🤭😍", shape: "hero", tilt: 0 },
+    { src: "/images/photo2.jpg", caption: "FOR THE REEL💕", shape: "tall", tilt: -3, polaroid: true },
+    { src: "/images/photo3.jpg", caption: "SWEETEST ONE", shape: "square", tilt: 2 },
+    { src: "/images/photo4.jpg", caption: "MY BADDIE ", shape: "wide" },
+    { src: "/images/photo5.jpg", caption: "INNOCENT BADDIE",  shape: "tall", tilt: 3 },
+    { src: "/images/photo6.jpg", caption: "FUNNY ARTI 😍🤭", date: "[DATE]", shape: "square", tilt: -2, polaroid: true },
+    { src: "/images/photo7.jpg", caption: "RANDOMLY LOOKING CUTE😎", shape: "wide" },
+    { src: "/images/photo8.jpg", caption: "UHMM SILLY ONE 🤭😝", date: "[DATE]", shape: "tall" },
+    { src: "/images/photo9.jpg", caption: "TEASING ONE😏", date: "[DATE]", shape: "square", tilt: 2 },
+    { src: "/images/photo10.jpg", caption: "MY FAV VIEW ❤️", date: "[DATE]", shape: "hero" },
+    { src: "/images/photo11.jpg", caption: "JUST YOU EFFORTLESSLY🤭💕", date: "[DATE]", shape: "square", tilt: -3, polaroid: true },
+    { src: "/images/photo12.jpg", caption: "PRETTIEST ONE😍", date: "[DATE]", shape: "tall" },
     // ...keep adding, 20–30 photos look best.
   ] as Photo[],
 
