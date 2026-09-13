@@ -244,9 +244,9 @@ export const CONFIG = {
 
   /* --------------------------------------------------------------- VIDEOS */
   videos: [
-    { src: "/video1.mp4", title: "Our little movie", caption: "[CAPTION]", poster: "" },
-    { src: "/video2.mp4", title: "Things I replay in my head", caption: "[CAPTION]", poster: "" },
-    { src: "/video3.mp4", title: "Us being us", caption: "[CAPTION]", poster: "" },
+    { src: "/video1.mp4", title: "TRENDY💕🤭", caption: "Had to recreate this one with my favorite person. 🥹", poster: "" },
+    { src: "/video2.mp4", title: "My girl, my world. ❤️", poster: "" },
+    { src: "/video3.mp4", title: "Our little movie, my favorite scene.💕😘", poster: "" },
   ] as VideoItem[],
 
   /* ----------------------------------------------------- HIDDEN SURPRISES */
