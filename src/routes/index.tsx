@@ -6,7 +6,7 @@ import { Opening } from "@/components/experience/Opening";
 import { BirthdayReveal } from "@/components/experience/BirthdayReveal";
 import { PhotoGallery } from "@/components/experience/PhotoGallery";
 import { MemoryMap } from "@/components/experience/MemoryMap";
-
+import { FirstMoments } from "@/components/experience/FirstMoments";
 import { SongNotes } from "@/components/experience/SongNotes";
 import { Quiz } from "@/components/experience/Quiz";
 import { VideoGallery } from "@/components/experience/VideoGallery";
@@ -123,7 +123,7 @@ function Index() {
         )}
       </div>
 
-      
+      <FirstMoments />
       <SongNotes />
 
       <Quiz
