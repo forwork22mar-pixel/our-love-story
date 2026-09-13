@@ -115,12 +115,12 @@ export const CONFIG = {
     { src: "/images/photo4.jpg", caption: "MY BADDIE ", shape: "wide"},
     { src: "/images/photo5.jpg", caption: "INNOCENT BADDIE",  shape: "tall", tilt: 3 },
     { src: "/images/photo6.jpg", caption: "FUNNY ARTI 😍🤭", shape: "square", tilt: -2, polaroid: true },
-    { src: "/images/photo12.jpg", caption: " PRETTIEST ONE😍", shape: "wide" },
+    { src: "/images/photo12.png", caption: " PRETTIEST ONE😍", shape: "wide" },
     { src: "/images/photo8.png", caption: "UHMM SILLY ONE 🤭😝" , shape: "tall" },
     { src: "/images/photo9.jpg", caption: "TEASING ONE😏",  shape: "square", tilt: 2 },
     { src: "/images/photo11.png", caption: "MY FAV VIEW ❤️", shape: "hero" , polaroid: true},
     { src: "/images/photo10.png", caption: "JUST YOU EFFORTLESSLY🤭💕", shape: "square", tilt: -3, polaroid: true },
-    { src: "/images/photo7.png", caption: "RANDOMLY LOOKING CUTE😎",  shape: "tall" },
+    { src: "/images/photo7.jpg", caption: "RANDOMLY LOOKING CUTE😎",  shape: "tall" },
     // ...keep adding, 20–30 photos look best.
   ] as Photo[],
 
@@ -202,6 +202,17 @@ export const CONFIG = {
   ] as Memory[],
 
   /* ------------------------------------------------------- CHAPTER 5 FIRSTS */
+  firsts: [
+    { title: "Our First Meet", date: "[DATE]", story: "[STORY]"," },
+    { title: "Our First Conversation", date: "[DATE]", story: "[STORY]" },
+    { title: "Our First Hug", date: "[DATE]", story: "[STORY]" },
+    { title: "Our First Photo", date: "[DATE]", story: "[STORY]", },
+    { title: "Our First Call", date: "[DATE]", story: "[STORY]" },
+    { title: "Our First Date", date: "[DATE]", story: "[STORY]" },
+    
+    { title: "Your First Gift", date: "[DATE]", story: "[STORY]" },
+    { title: 'Our First "I Love You"', date: "[DATE]", story: "[STORY]" },
+  ] as FirstMoment[],
  
   /* --------------------------------------------------------------- SONGS */
   songs: [
@@ -215,14 +226,14 @@ export const CONFIG = {
   quiz: {
     title: "Okay… let's see how well you remember us.",
     questions: [
-      { question: "Where did we first meet?", options: ["[OPTION A]", "[OPTION B]", "[OPTION C]"], answerIndex: 0 },
-      { question: "What was the first thing we talked about?", options: ["[OPTION A]", "[OPTION B]", "[OPTION C]"], answerIndex: 1 },
-      { question: 'Who said "[SOMETHING]" first?', options: ["Me", "You", "Neither of us remembers"], answerIndex: 0 },
-      { question: "What was our first photo together?", image: "/images/first-photo.jpg", options: ["[OPTION A]", "[OPTION B]", "[OPTION C]"], answerIndex: 2 },
-      { question: "What is our most repeated inside joke?", options: ["[OPTION A]", "[OPTION B]", "[OPTION C]"], answerIndex: 0 },
-      { question: "What was the first place we went together?", options: ["[OPTION A]", "[OPTION B]", "[OPTION C]"], answerIndex: 1 },
-      { question: "Which song reminds me of that day?", options: ["[OPTION A]", "[OPTION B]", "[OPTION C]"], answerIndex: 0 },
-      { question: "[QUIZ QUESTION]", options: ["[OPTION A]", "[OPTION B]", "[OPTION C]"], answerIndex: 2 },
+      { question: "When did your lips touched My cheeks for the first Time😘 ?", options: ["At the flat 🤭", "Lodhi garden💕", "The mall😍"], answerIndex: 1 },
+      { question: "What was my respose to your confession🫣", options: ["Fuckkkk'😮", "Areh dada💕", "I like you to😍"], answerIndex: 1 },
+      { question: 'Who said "I LOVE YOUUU❤️ " first?', options: ["Me", "You", "Neither of us remembers"], answerIndex: 0 },
+      { question: "How doy you like me the most in ?", options: ["Bald", "long Hairs", "Short hairs"], answerIndex: 0 },
+      { question: "What dish I love to call you?", options: ["Bundi ke Ladoo😝", "Rasgulla🫣 ", "Rasmalai🤤"], answerIndex: 2 },
+      { question: "When did I insited the first kiss?", options: ["On the couch", "After the didi call", "In the lift"], answerIndex: 1 },
+      { question: "Which song i uploaded on our fisrt story?", options: ["Mein tera Mein tera❤️ ", "You are my soniyo💕", "I like me Better🤭"], answerIndex: 0 },
+      { question: "What song it was when you were in my story for the fisrt time?", options: ["I found Her", "Yeh fitoor Mera", "Meri banogi kya"], answerIndex: 1 },
     ] as QuizQuestion[],
     correct: "YOU REMEMBERED ❤",
     wrong: "Close… but I remember it differently 😌",
