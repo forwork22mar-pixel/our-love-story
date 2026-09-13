@@ -202,18 +202,7 @@ export const CONFIG = {
   ] as Memory[],
 
   /* ------------------------------------------------------- CHAPTER 5 FIRSTS */
-  firsts: [
-    { title: "Our First Meet", date: "[DATE]", story: "[STORY]", image: "/images/first-meet.jpg" },
-    { title: "Our First Conversation", date: "[DATE]", story: "[STORY]" },
-    { title: "Our First Hug", date: "[DATE]", story: "[STORY]" },
-    { title: "Our First Photo", date: "[DATE]", story: "[STORY]", image: "/images/first-photo.jpg" },
-    { title: "Our First Call", date: "[DATE]", story: "[STORY]" },
-    { title: "Our First Date", date: "[DATE]", story: "[STORY]" },
-    
-    { title: "Your First Gift", date: "[DATE]", story: "[STORY]" },
-    { title: 'Our First "I Love You"', date: "[DATE]", story: "[STORY]" },
-  ] as FirstMoment[],
-
+ 
   /* --------------------------------------------------------------- SONGS */
   songs: [
     { title: "[SONG]", artist: "[ARTIST]", note: "This song reminds me of you because [WHY].", link: "", preview: "" },
