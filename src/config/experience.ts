@@ -203,7 +203,7 @@ export const CONFIG = {
 
   /* ------------------------------------------------------- CHAPTER 5 FIRSTS */
   firsts: [
-    { title: "Our First Meet", date: "[DATE]", story: "[STORY]"," },
+    { title: "Our First Meet", date: "[DATE]", story: "[STORY]" },
     { title: "Our First Conversation", date: "[DATE]", story: "[STORY]" },
     { title: "Our First Hug", date: "[DATE]", story: "[STORY]" },
     { title: "Our First Photo", date: "[DATE]", story: "[STORY]", },
