@@ -216,10 +216,10 @@ export const CONFIG = {
  
   /* --------------------------------------------------------------- SONGS */
   songs: [
-    { title: "[SONG]", artist: "[ARTIST]", note: "This song reminds me of you because [WHY].", link: "", preview: "" },
-    { title: "[SONG]", artist: "[ARTIST]", note: "This song reminds me of you because [WHY].", link: "", preview: "" },
-    { title: "[SONG]", artist: "[ARTIST]", note: "This song reminds me of you because [WHY].", link: "", preview: "" },
-    { title: "[SONG]", artist: "[ARTIST]", note: "This song reminds me of you because [WHY].", link: "", preview: "" },
+    { title: "[SONG]", artist: "[ARTIST]", note: "This song reminds me of you because [WHY].", link: "/music/Haareya.mp3", preview: "" },
+    { title: "[SONG]", artist: "[ARTIST]", note: "This song reminds me of you because [WHY].", link: "/music/Lover.mp3", preview: "" },
+    { title: "[SONG]", artist: "[ARTIST]", note: "This song reminds me of you because [WHY].", link: "/music/Tu-Chahiye.mp3", preview: "" },
+    { title: "[SONG]", artist: "[ARTIST]", note: "This song reminds me of you because [WHY].", link: "/music/Until-I-Found-You.mp3", preview: "" },
   ] as Song[],
 
   /* ---------------------------------------------------------------- QUIZ */
