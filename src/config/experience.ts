@@ -216,10 +216,10 @@ export const CONFIG = {
  
   /* --------------------------------------------------------------- SONGS */
   songs: [
-    { title: "[SONG]", artist: "[ARTIST]", note: "This song reminds me of you because [WHY].", link: "/music/Haareya.mp3", preview: "" },
-    { title: "[SONG]", artist: "[ARTIST]", note: "This song reminds me of you because [WHY].", link: "/music/Lover.mp3", preview: "" },
-    { title: "[SONG]", artist: "[ARTIST]", note: "This song reminds me of you because [WHY].", link: "/music/Tu-Chahiye.mp3", preview: "" },
-    { title: "[SONG]", artist: "[ARTIST]", note: "This song reminds me of you because [WHY].", link: "/music/Until-I-Found-You.mp3", preview: "" },
+    { title: "HAAREYA😋", artist: "Arijit Singh", note: "This song reminds me of you because I lost me heart when you confessed me.😭😋", link: "/music/Haareya.mp3", preview: "" },
+    { title: "LOVER❤️", artist: "Taylor Swift", note: "You're my, my, my, my Lover", link: "/music/Lover.mp3", preview: "" },
+    { title: "TU CHAHIYE🫣", artist: " Atif Aslam", note: "Koi aur duja kyun mujhe Na tere siva chahiye Har safar mai mujhe Tu hi rehnuma chahiye", link: "/music/Tu-Chahiye.mp3", preview: "" },
+    { title: "UNTIL I FOUND YOU😭", artist: "Stephen Sanchez ", note: "The Day I Found HERRRRRR( Youuuuuuuu)❤️😭", link: "/music/Until-I-Found-You.mp3", preview: "" },
   ] as Song[],
 
   /* ---------------------------------------------------------------- QUIZ */
