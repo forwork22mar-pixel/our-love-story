@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { CONFIG } from "@/config/experience";
 import { Atmosphere } from "@/components/experience/Atmosphere";
 import { Opening } from "@/components/experience/Opening";
@@ -8,7 +8,7 @@ import { PhotoGallery } from "@/components/experience/PhotoGallery";
 import { MemoryMap } from "@/components/experience/MemoryMap";
 import { FirstMoments } from "@/components/experience/FirstMoments";
 import { SongNotes } from "@/components/experience/SongNotes";
-import { Quiz } from "@/components/experience/Quiz";
+import { QuizTeaser } from "@/components/experience/QuizTeaser";
 import { VideoGallery } from "@/components/experience/VideoGallery";
 import { LoveLetter } from "@/components/experience/LoveLetter";
 import { HiddenStar } from "@/components/experience/HiddenStar";
@@ -62,6 +62,14 @@ function Index() {
   const [openedMemories, setOpenedMemories] = useState<string[]>([]);
   const [foundSecrets, setFoundSecrets] = useState(0);
 
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (window.sessionStorage.getItem("quizDone") === "1") {
+      setQuizDone(true);
+      setEntered(true);
+    }
+  }, []);
+
   const onOpenMemory = useCallback((id: string) => {
     setOpenedMemories((prev) => (prev.includes(id) ? prev : [...prev, id]));
   }, []);
@@ -71,7 +79,11 @@ function Index() {
     setQuizDone(false);
     setOpenedMemories([]);
     setFoundSecrets(0);
-    if (typeof window !== "undefined") window.scrollTo({ top: 0, behavior: "auto" });
+    if (typeof window !== "undefined") {
+      window.sessionStorage.removeItem("quizDone");
+      window.sessionStorage.removeItem("quizScore");
+      window.scrollTo({ top: 0, behavior: "auto" });
+    }
   }, []);
 
   const hidden = CONFIG.hidden;
@@ -126,11 +138,7 @@ function Index() {
       <FirstMoments />
       <SongNotes />
 
-      <Quiz
-        onComplete={() => {
-          setQuizDone(true);
-        }}
-      />
+      <QuizTeaser done={quizDone} />
 
       <div className="relative">
         <VideoGallery />
