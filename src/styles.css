@@ -48,6 +48,7 @@
   --font-display: "Cormorant Garamond", ui-serif, Georgia, serif;
   --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-hand: "Caveat", "Cormorant Garamond", cursive;
 }
 
 :root {
@@ -148,6 +149,11 @@
   color: var(--muted-foreground);
 }
 
+@utility font-hand {
+  font-family: var(--font-hand);
+  letter-spacing: 0;
+}
+
 @utility text-gradient-rose {
   background: var(--gradient-rose);
   background-clip: text;
@@ -177,6 +183,18 @@
   opacity: 0.35;
   mix-blend-mode: soft-light;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+}
+
+.quiz-letter::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.2;
+  background-image:
+    linear-gradient(to bottom, transparent 2.45rem, color-mix(in oklab, var(--paper-foreground) 12%, transparent) 2.5rem),
+    radial-gradient(circle at 18% 12%, color-mix(in oklab, var(--champagne) 22%, transparent), transparent 28%);
+  background-size: 100% 2.5rem, 100% 100%;
 }
 
 @keyframes drift {
