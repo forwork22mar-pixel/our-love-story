@@ -258,16 +258,27 @@ export const CONFIG = {
   ] as HiddenSurprise[],
 
   /* --------------------------------------------------------------- LETTER */
-  letter: {
-    teaser: "I wrote this instead of trying to say it all.",
-    greeting: "Dear [HER NAME],",
-    body: [
-      "[I don't know if I can fit everything I feel into one page — but here's the attempt.]",
-      "[SECOND PARAGRAPH.]",
-      "[THIRD PARAGRAPH.]",
-    ],
-    signature: "— [YOUR NAME]",
-  },
+ letter: {
+  teaser: "I wrote this instead of trying to say it all.",
+  greeting: "Dear Baby,",
+  body: [
+    "My baby,",
+    "I don't know if I can fit everything I feel into one page — but here's the attempt.",
+    "I don't even know where to start because there is so much I want to say to you...",
+    "You have made my life so much more beautiful just by being a part of it.",
+    "If I could choose one person to meet again in every lifetime, it would always be you.",
+    "I hope you know that you are loved, not just today, but in all the little moments between today and forever...",
+    "I hope you always remember how special you are to me. ❤️",
+    "If This website could hold every memory we've made, I'd probably need an entire universe.”,
+    "I don't know what every tomorrow will look like, but I know who I want beside me while I find out.”,
+    "Happy birthday to the girl who became my favorite story.”,
+    "Happy birthday to my favorite person to annoy forever.",
+    "Happy birthday to the girl who changed my life without even trying.",
+    "Happy Birthday, my love. This little world I made for you is just a small way of showing you how much you mean to me.",
+    "Always yours ❤️",
+  ],
+  signature: "— [YOUR HUBBY (SURI)]",
+},
 
   /* ----------------------------------------------------------- VOICE NOTE */
   voiceNote: {
@@ -289,7 +300,7 @@ export const CONFIG = {
   /* ---------------------------------------------------------------- FINAL */
   final: {
     build: ["Okay…", "One last thing.", "You thought that was everything?", "Not even close."],
-    line1: "Happy Birthday, [HER NAME].",
+    line1: "Happy Birthday, ARTIIIIIIIII😋❤️.",
     line2: "Thank you for being one of my favorite parts of life.",
     line3: "Here's to all the memories we've already made…",
     line4: "…and all the ones we haven't made yet.",
