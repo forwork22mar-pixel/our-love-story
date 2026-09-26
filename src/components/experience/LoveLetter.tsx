@@ -73,20 +73,23 @@ export function LoveLetter() {
           </motion.p>
 
           <div className="relative mx-auto mt-4 h-64 w-full max-w-sm sm:h-80" aria-label="A heart made of words">
-            {WORDS.map((word, i) => (
-              <motion.span
-                key={word}
-                initial={{ opacity: 0, scale: 0.2 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 1 + i * HEART_STEP, ease: [0.16, 1, 0.3, 1] }}
-                style={{ left: `${POINTS[i].left}%`, top: `${POINTS[i].top}%` }}
-                className={`absolute -translate-x-1/2 -translate-y-1/2 whitespace-nowrap font-display text-blush ${
-                  i === WORDS.length - 1 ? "text-sm text-rose sm:text-lg" : "text-[0.65rem] sm:text-base"
-                }`}
-              >
-                {word}
-              </motion.span>
-            ))}
+            {WORDS.map((word, i) => {
+              const pt = POINTS[i]!;
+              return (
+                <motion.span
+                  key={word}
+                  initial={{ opacity: 0, scale: 0.2 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.6, delay: 1 + i * HEART_STEP, ease: [0.16, 1, 0.3, 1] }}
+                  style={{ left: `${pt.left}%`, top: `${pt.top}%` }}
+                  className={`absolute -translate-x-1/2 -translate-y-1/2 whitespace-nowrap font-display text-blush ${
+                    i === WORDS.length - 1 ? "text-sm text-rose sm:text-lg" : "text-[0.65rem] sm:text-base"
+                  }`}
+                >
+                  {word}
+                </motion.span>
+              );
+            })}
           </div>
 
           <motion.p
