@@ -14,9 +14,9 @@ const POINTS = [
   { left: 78, top: 28 },
   { left: 87, top: 48 },
   { left: 78, top: 68 },
-  { left: 62, top: 84 },
-  { left: 50, top: 95 },
-  { left: 38, top: 84 },
+  { left: 64, top: 79 },
+  { left: 50, top: 94 },
+  { left: 36, top: 88 },
   { left: 13, top: 48 },
 ];
 
