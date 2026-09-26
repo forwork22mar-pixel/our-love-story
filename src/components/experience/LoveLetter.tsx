@@ -5,13 +5,20 @@ import { Chapter, GlowButton } from "./ui";
 
 const WORDS = CONFIG.letter.heartWords;
 
-// Word positions along a parametric heart curve (percent-based, responsive).
-const POINTS = WORDS.map((_, i) => {
-  const t = (i / WORDS.length) * Math.PI * 2 + Math.PI;
-  const x = 16 * Math.sin(t) ** 3;
-  const y = 13 * Math.cos(t) - 5 * Math.cos(2 * t) - 2 * Math.cos(3 * t) - Math.cos(4 * t);
-  return { left: 50 + x * 2.6, top: 50 - y * 2.6 };
-});
+// Hand-placed positions around a heart outline (percent-based, responsive),
+// ordered to trace the shape as the words appear one by one.
+const POINTS = [
+  { left: 22, top: 28 },
+  { left: 36, top: 13 },
+  { left: 64, top: 13 },
+  { left: 78, top: 28 },
+  { left: 87, top: 48 },
+  { left: 78, top: 68 },
+  { left: 62, top: 84 },
+  { left: 50, top: 95 },
+  { left: 38, top: 84 },
+  { left: 13, top: 48 },
+];
 
 const HEART_STEP = 0.35;
 const EARNED_AT = 1.2 + WORDS.length * HEART_STEP;
