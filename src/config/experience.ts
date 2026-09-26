@@ -259,6 +259,24 @@ export const CONFIG = {
 
   /* --------------------------------------------------------------- LETTER */
   letter: {
+    whyTitle: "WHY I CHOSE ARTI ❤️",
+    whySubtitle: "A completely unbiased investigation.",
+    whyReasons: [
+      "Ridiculously pretty. Obviously.",
+      "Cute and annoying at the same time.",
+      "Makes ordinary moments special.",
+      "My favorite person to annoy.",
+      "Prettiest smile.",
+      "Understands my weirdness.",
+      "Simply... my favorite person. ❤️",
+    ],
+    whyMore: "There are more →",
+    tooEarly: "TOO EARLY, HONEY. 😭",
+    heartWords: [
+      "PRETTY", "BEAUTIFUL", "CUTEST", "MY BABY", "MY LOVE",
+      "SWEETEST", "GORGEOUS", "MY HOME", "MY PERSON", "ARTI ❤️",
+    ],
+    earnedIt: "Okay... you earned it. ❤️",
     teaser: "I wrote this instead of trying to say it all.",
     greeting: "Dear [HER NAME],",
     body: [
