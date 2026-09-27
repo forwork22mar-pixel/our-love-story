@@ -51,10 +51,10 @@ function WordHeart() {
           initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} viewport={{ once: true }} transition={{ duration: 2 }} />
         <g clipPath="url(#heart-clip)">
           {words.map((w, i) => {
-            const pt = SPOTS[i % SPOTS.length]!;
+            const spot = SPOTS[i]!;
             return (
-              <motion.text key={w + i} x={pt[0]} y={pt[1]} textAnchor="middle" dominantBaseline="middle"
-                fontSize={w.length > 7 ? 3.4 : 4.2} fill={i % 3 === 0 ? "var(--champagne)" : "var(--rose)"}
+              <motion.text key={w + i} x={spot[0]} y={spot[1]} textAnchor="middle" dominantBaseline="middle"
+                fontSize={spot[2]} fill={i % 3 === 0 ? "var(--champagne)" : "var(--rose)"}
                 style={{ fontFamily: "var(--font-display)", letterSpacing: "0.05em" }}
                 initial={{ opacity: 0, scale: 0.4 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}
                 transition={{ delay: 1.2 + i * 0.13, duration: 0.6 }}>
@@ -62,7 +62,7 @@ function WordHeart() {
               </motion.text>
             );
           })}
-          <motion.text x="50" y="59" textAnchor="middle" dominantBaseline="middle" fontSize="8.5" fill="var(--blush)"
+          <motion.text x="50" y="63" textAnchor="middle" dominantBaseline="middle" fontSize="8.5" fill="var(--blush)"
             style={{ fontFamily: "var(--font-display)", fontWeight: 600 }}
             initial={{ opacity: 0, scale: 0.5 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}
             transition={{ delay: 1.4 + words.length * 0.13, duration: 1 }}>
