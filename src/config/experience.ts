@@ -260,7 +260,7 @@ export const CONFIG = {
   /* --------------------------------------------------------------- LETTER */
  letter: {
   heartName: "ARTI",
-  heartWords: ["GORGEOUS","RADIANT","SWEETEST","MY PERSON","PRECIOUS","ANGEL","ADORABLE","LOVELY","SUNSHINE","MAGIC","DREAMY","MY HOME","GLOWING","KIND SOUL","CUTEST","BEAUTIFUL","PRETTY","MY BABY","MY LOVE","PERFECT","MY CALM","CHERISHED","ONE & ONLY","FOREVER","MINE"],
+  heartWords: ["DUMBO","MAGIC","WIFEY","LOVELY","PRETTY","SUNSHINE","MY HOME","DREAMY","MY BABY","ADORABLE","GLOWING","RASMALAI","MY PERSON","PRECIOUS","KIND SOUL","MY CALM","GORGEOUS","ONE & ONLY","BEAUTIFUL","CUTEST","SWEETEST","PERFECT","CHERISHED","MY LOVE","MINE","FOREVER"],
   teaser: "I wrote this instead of trying to say it all.",
   greeting: "Dear Baby,",
   body: [

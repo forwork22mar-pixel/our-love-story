@@ -4,10 +4,17 @@ import { CONFIG } from "@/config/experience";
 import { Chapter } from "./ui";
 
 const HEART_PATH = "M50 32 A21 21 0 0 1 92 32 Q92 60 50 90 Q8 60 8 32 A21 21 0 0 1 50 32 Z";
-const SPOTS: [number, number][] = [
-  [22,24],[36,24],[64,24],[78,24],[16,34],[32,34],[68,34],[84,34],
-  [20,44],[38,44],[62,44],[80,44],[14,52],[30,52],[70,52],[86,52],
-  [26,66],[42,68],[58,68],[74,66],[34,75],[50,77],[66,75],[42,83],[58,83],
+// [x, y, fontSize] — measured widths, packed per row so nothing touches or clips
+const SPOTS: [number, number, number][] = [
+  [21.7,21,3.8],[36.9,21,3.8],[63,21,3.8],[77.7,21,3.8],
+  [21.1,30,3.8],[39.4,30,3.8],[59.5,30,3.8],[78.1,30,3.8],
+  [18.5,39,3.8],[38.8,39,3.8],[60.1,39,3.8],[80.5,39,3.6],
+  [21.9,48,3.4],[41.8,48,3.4],[61.1,48,3.4],[79.9,48,3.4],
+  [30.5,56,3.6],[51.4,56,3.0],[70.9,56,3.2],
+  [29.6,63,3.2],[71.5,63,2.8],
+  [39.1,72,3.4],[58.2,72,3.4],
+  [45.4,79,2.8],[57.1,79,2.8],
+  [50,85,2.9],
 ];
 
 function Lily({ side }: { side: "left" | "right" }) {
@@ -44,10 +51,10 @@ function WordHeart() {
           initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} viewport={{ once: true }} transition={{ duration: 2 }} />
         <g clipPath="url(#heart-clip)">
           {words.map((w, i) => {
-            const pt = SPOTS[i % SPOTS.length]!;
+            const spot = SPOTS[i]!;
             return (
-              <motion.text key={w + i} x={pt[0]} y={pt[1]} textAnchor="middle" dominantBaseline="middle"
-                fontSize={w.length > 7 ? 3.4 : 4.2} fill={i % 3 === 0 ? "var(--champagne)" : "var(--rose)"}
+              <motion.text key={w + i} x={spot[0]} y={spot[1]} textAnchor="middle" dominantBaseline="middle"
+                fontSize={spot[2]} fill={i % 3 === 0 ? "var(--champagne)" : "var(--rose)"}
                 style={{ fontFamily: "var(--font-display)", letterSpacing: "0.05em" }}
                 initial={{ opacity: 0, scale: 0.4 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}
                 transition={{ delay: 1.2 + i * 0.13, duration: 0.6 }}>
@@ -55,7 +62,7 @@ function WordHeart() {
               </motion.text>
             );
           })}
-          <motion.text x="50" y="59" textAnchor="middle" dominantBaseline="middle" fontSize="8.5" fill="var(--blush)"
+          <motion.text x="50" y="63.5" textAnchor="middle" dominantBaseline="middle" fontSize="7.5" fill="var(--blush)"
             style={{ fontFamily: "var(--font-display)", fontWeight: 600 }}
             initial={{ opacity: 0, scale: 0.5 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}
             transition={{ delay: 1.4 + words.length * 0.13, duration: 1 }}>
