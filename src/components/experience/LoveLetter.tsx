@@ -4,17 +4,17 @@ import { CONFIG } from "@/config/experience";
 import { Chapter } from "./ui";
 
 const HEART_PATH = "M50 32 A21 21 0 0 1 92 32 Q92 60 50 90 Q8 60 8 32 A21 21 0 0 1 50 32 Z";
-// [x, y, fontSize] — hand-placed so every word stays inside the heart curve
+// [x, y, fontSize] — measured widths, packed per row so nothing touches or clips
 const SPOTS: [number, number, number][] = [
-  [22,21,3.8],[39,21,3.8],[61,21,3.8],[78,21,3.8],
-  [17,30,3.8],[35,30,3.8],[65,30,3.8],[83,30,3.8],
-  [20,39,3.8],[39,39,3.8],[62,39,3.8],[80,39,3.6],
-  [22,48,3.2],[41,48,3.6],[62,48,3.6],[79,48,3.6],
-  [27,56,3.6],[50,56,3.0],[71,56,3.2],
-  [29,63,3.0],[71,63,3.2],
-  [38,72,3.4],[54,72,3.4],
-  [42,79,2.8],[56.5,79,2.8],
-  [50,85,3.0],
+  [21.7,21,3.8],[36.9,21,3.8],[63,21,3.8],[77.7,21,3.8],
+  [21.1,30,3.8],[39.4,30,3.8],[59.5,30,3.8],[78.1,30,3.8],
+  [18.5,39,3.8],[38.8,39,3.8],[60.1,39,3.8],[80.5,39,3.6],
+  [21.9,48,3.4],[41.8,48,3.4],[61.1,48,3.4],[79.9,48,3.4],
+  [30.5,56,3.6],[51.4,56,3.0],[70.9,56,3.2],
+  [29.6,63,3.2],[71.5,63,2.8],
+  [39.1,72,3.4],[58.2,72,3.4],
+  [45.4,79,2.8],[57.1,79,2.8],
+  [50,85,2.9],
 ];
 
 function Lily({ side }: { side: "left" | "right" }) {
@@ -62,7 +62,7 @@ function WordHeart() {
               </motion.text>
             );
           })}
-          <motion.text x="50" y="63" textAnchor="middle" dominantBaseline="middle" fontSize="8.5" fill="var(--blush)"
+          <motion.text x="50" y="63.5" textAnchor="middle" dominantBaseline="middle" fontSize="7.5" fill="var(--blush)"
             style={{ fontFamily: "var(--font-display)", fontWeight: 600 }}
             initial={{ opacity: 0, scale: 0.5 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}
             transition={{ delay: 1.4 + words.length * 0.13, duration: 1 }}>
