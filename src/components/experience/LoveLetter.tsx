@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from "motion/react";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { useInView } from "motion/react";
 import { CONFIG } from "@/config/experience";
 import { Chapter } from "./ui";
 
@@ -41,10 +42,93 @@ function Lily({ side }: { side: "left" | "right" }) {
   );
 }
 
+const FALLING_BLOOMS = [
+  { left: 7, delay: 0, duration: 5.6, symbol: "❤", size: "text-lg" },
+  { left: 17, delay: 1.1, duration: 6.4, symbol: "❀", size: "text-xl" },
+  { left: 29, delay: 0.5, duration: 5.2, symbol: "♥", size: "text-sm" },
+  { left: 42, delay: 1.8, duration: 6.8, symbol: "✿", size: "text-lg" },
+  { left: 54, delay: 0.8, duration: 5.9, symbol: "❤", size: "text-xl" },
+  { left: 66, delay: 2.2, duration: 6.2, symbol: "❀", size: "text-sm" },
+  { left: 79, delay: 0.3, duration: 5.4, symbol: "♥", size: "text-lg" },
+  { left: 91, delay: 1.5, duration: 6.6, symbol: "✿", size: "text-xl" },
+];
+
+function FallingLove({ active }: { active: boolean }) {
+  return (
+    <div className="pointer-events-none fixed inset-0 z-40 overflow-hidden" aria-hidden>
+      {FALLING_BLOOMS.map((item, i) => (
+        <motion.span
+          key={`${item.symbol}-${i}`}
+          className={`absolute -top-10 ${item.size} ${i % 2 === 0 ? "text-rose" : "text-blush"}`}
+          style={{ left: `${item.left}%` }}
+          initial={{ y: "-8vh", opacity: 0, rotate: -25 }}
+          animate={active ? { y: "108vh", opacity: [0, 0.9, 0.9, 0], rotate: [0, 45, -35, 90], x: [0, 18, -14, 8] } : {}}
+          transition={{ delay: item.delay, duration: item.duration, ease: "easeInOut" }}
+        >
+          {item.symbol}
+        </motion.span>
+      ))}
+    </div>
+  );
+}
+
+function Bouquet() {
+  const petals = [0, 72, 144, 216, 288];
+  const sunflowerPetals = Array.from({ length: 12 }, (_, i) => i * 30);
+  return (
+    <motion.svg
+      viewBox="0 0 180 112"
+      className="absolute left-1/2 top-[79%] z-10 w-[72%] -translate-x-1/2 overflow-visible drop-shadow-[0_10px_18px_var(--ink)]"
+      aria-label="A bouquet of lilies, sunflowers, and roses"
+      initial={{ opacity: 0, scale: 0.7, y: 20 }}
+      whileInView={{ opacity: 1, scale: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: 3.6, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+    >
+      <g fill="none" stroke="var(--sage)" strokeWidth="2">
+        <path d="M90 106 Q70 70 39 28" /><path d="M90 106 Q79 59 71 21" />
+        <path d="M90 106 Q101 58 111 18" /><path d="M90 106 Q119 72 143 31" />
+        <path d="M90 106 Q90 63 91 13" />
+      </g>
+      <g fill="var(--sage)" opacity=".9">
+        <path d="M78 76 Q54 66 50 51 Q72 55 82 70Z" /><path d="M100 79 Q124 65 131 51 Q108 55 96 71Z" />
+      </g>
+
+      {[{ x: 42, y: 29, r: -18 }, { x: 139, y: 31, r: 20 }].map((flower, fi) => (
+        <motion.g key={fi} style={{ transformOrigin: `${flower.x}px ${flower.y}px` }} initial={{ scale: 0 }} whileInView={{ scale: 1 }} viewport={{ once: true }} transition={{ delay: 4 + fi * 0.25, duration: 0.9 }}>
+          <g transform={`translate(${flower.x} ${flower.y}) rotate(${flower.r})`}>
+            {sunflowerPetals.map((r) => <ellipse key={r} cx="0" cy="-11" rx="4.2" ry="10" fill="var(--champagne)" transform={`rotate(${r})`} />)}
+            <circle r="7" fill="var(--burgundy)" /><circle r="3.5" fill="var(--ink)" opacity=".8" />
+          </g>
+        </motion.g>
+      ))}
+
+      {[{ x: 70, y: 23 }, { x: 111, y: 20 }].map((flower, fi) => (
+        <motion.g key={fi} style={{ transformOrigin: `${flower.x}px ${flower.y}px` }} initial={{ scale: 0, rotate: -20 }} whileInView={{ scale: 1, rotate: 0 }} viewport={{ once: true }} transition={{ delay: 4.25 + fi * 0.2, duration: 1 }}>
+          {petals.map((r) => <path key={r} d={`M${flower.x} ${flower.y} Q${flower.x - 7} ${flower.y - 15} ${flower.x} ${flower.y - 25} Q${flower.x + 7} ${flower.y - 15} ${flower.x} ${flower.y}Z`} fill="var(--blush)" stroke="var(--rose)" strokeWidth=".7" transform={`rotate(${r} ${flower.x} ${flower.y})`} />)}
+          <circle cx={flower.x} cy={flower.y} r="3" fill="var(--champagne)" />
+        </motion.g>
+      ))}
+
+      {[{ x: 91, y: 19 }, { x: 58, y: 49 }, { x: 122, y: 49 }].map((rose, ri) => (
+        <motion.g key={ri} style={{ transformOrigin: `${rose.x}px ${rose.y}px` }} initial={{ scale: 0 }} whileInView={{ scale: 1 }} viewport={{ once: true }} transition={{ delay: 4.5 + ri * 0.16, duration: 0.8 }}>
+          <circle cx={rose.x} cy={rose.y} r="11" fill="var(--rose)" />
+          <path d={`M${rose.x - 7} ${rose.y} Q${rose.x} ${rose.y - 10} ${rose.x + 7} ${rose.y} Q${rose.x} ${rose.y + 9} ${rose.x - 5} ${rose.y + 2} Q${rose.x} ${rose.y - 5} ${rose.x + 4} ${rose.y + 1}`} fill="none" stroke="var(--blush)" strokeWidth="1.3" />
+        </motion.g>
+      ))}
+      <path d="M73 91 Q90 101 107 91 L101 109 Q90 104 79 109Z" fill="var(--burgundy)" />
+      <path d="M90 99 Q78 87 70 96 Q79 105 90 100 Q102 105 111 96 Q102 87 90 99Z" fill="var(--rose)" />
+    </motion.svg>
+  );
+}
+
 function WordHeart() {
   const words = CONFIG.letter.heartWords;
+  const heartRef = useRef<HTMLDivElement>(null);
+  const isForming = useInView(heartRef, { once: true, amount: 0.25 });
   return (
-    <div className="relative mx-auto mb-16 w-full max-w-md">
+    <div ref={heartRef} className="relative mx-auto mb-28 w-full max-w-md sm:mb-32">
+      <FallingLove active={isForming} />
       <svg viewBox="0 0 100 100" className="w-full drop-shadow-[0_0_30px_var(--rose)]">
         <defs><clipPath id="heart-clip"><path d={HEART_PATH} /></clipPath></defs>
         <motion.path d={HEART_PATH} fill="color-mix(in oklab, var(--rose) 12%, transparent)" stroke="var(--rose)" strokeWidth="0.7"
@@ -72,6 +156,7 @@ function WordHeart() {
       </svg>
       <Lily side="left" />
       <Lily side="right" />
+      <Bouquet />
     </div>
   );
 }
