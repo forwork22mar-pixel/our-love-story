@@ -293,9 +293,9 @@ export const CONFIG = {
     lockedTitle: "REWARD LOCKED",
     lockedNote: "Complete our little journey to unlock this.",
     unlockedTitle: "REWARD UNLOCKED ❤",
-    couponTitle: "[REWARD TITLE — e.g. One date night, my treat.]",
-    couponBody: "[REWARD DETAILS — redeemable any time, no expiry.]",
-    couponCode: "[FOREVER-01]",
+    couponTitle: "Unlimited love & unlimited kisses forever",
+    couponBody: "For Arti — use it whenever you want, as many times as you want. It never expires. ❤️",
+    couponCode: "FOREVER",
   },
 
   /* ---------------------------------------------------------------- FINAL */
