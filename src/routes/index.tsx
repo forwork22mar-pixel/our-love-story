@@ -17,6 +17,9 @@ import { OneLastThing, FinalReveal } from "@/components/experience/FinalReveal";
 import { RewardUnlock } from "@/components/experience/RewardUnlock";
 import { MusicPlayer } from "@/components/experience/MusicPlayer";
 import { Chapter, Divider, Reveal } from "@/components/experience/ui";
+import bouquetSketch from "@/assets/bouquet-sketch.jpg";
+import bouquetNeon from "@/assets/bouquet-neon.png.asset.json";
+import bouquetPhoto from "@/assets/bouquet-photo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -150,6 +153,29 @@ function Index() {
           />
         )}
       </div>
+
+      <section className="relative mx-auto max-w-6xl px-6 py-20 sm:py-28">
+        <Reveal>
+          <p className="eyebrow text-center">a few flowers for you</p>
+          <h2 className="display mt-3 text-center text-4xl sm:text-5xl">Every bloom, for you</h2>
+        </Reveal>
+        <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-3 sm:items-center">
+          {[bouquetSketch, bouquetNeon.url, bouquetPhoto.url].map((src, i) => (
+            <Reveal key={i} delay={i * 0.15}>
+              <img
+                src={src}
+                alt="A bouquet of flowers"
+                loading="lazy"
+                className={`mx-auto w-full max-w-xs object-cover transition-transform duration-700 hover:scale-105 ${i === 1 ? "sm:-translate-y-6" : ""}`}
+                style={{
+                  maskImage: "radial-gradient(ellipse at center, black 50%, transparent 75%)",
+                  WebkitMaskImage: "radial-gradient(ellipse at center, black 50%, transparent 75%)",
+                }}
+              />
+            </Reveal>
+          ))}
+        </div>
+      </section>
 
       <div className="relative">
         <LoveLetter />
