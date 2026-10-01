@@ -285,7 +285,7 @@ export const CONFIG = {
   voiceNote: {
     src: "/music/voice-note.mp3",
     button: "There's something I wanted you to hear.",
-    caption: "[ONE LINE ABOUT THE VOICE NOTE]",
+    caption: "I LOVVVVVVEEEE YOUUUUU SOOOOO MUCH BABYYYYY , HAPPPIESTT BIRTHDAY 😘❤️ HONEY",
   },
 
   /* --------------------------------------------------------------- REWARD */
