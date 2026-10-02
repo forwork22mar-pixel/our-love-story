@@ -48,7 +48,7 @@ export function VoiceNote() {
         </button>
 
         <p className="mt-5 text-xs text-muted-foreground">
-          {missing ? "Add your recording at public/music/voice-note.mp3" : CONFIG.voiceNote.caption}
+          {missing ? "The recording could not load. Please try again." : CONFIG.voiceNote.caption}
         </p>
 
         <audio
