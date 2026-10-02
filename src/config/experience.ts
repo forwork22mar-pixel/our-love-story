@@ -10,7 +10,7 @@
  *  Missing files degrade gracefully (an elegant placeholder is shown instead).
  * ========================================================================= */
 
-import voiceNoteAsset from "@/assets/for-her.m4a.asset.json";
+import voiceNoteAsset from "@/assets/for-her.mp3.asset.json";
 
 
 export type Photo = {
