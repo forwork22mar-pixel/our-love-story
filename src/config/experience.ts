@@ -10,6 +10,9 @@
  *  Missing files degrade gracefully (an elegant placeholder is shown instead).
  * ========================================================================= */
 
+import voiceNoteAsset from "@/assets/for-her.mp3.asset.json";
+
+
 export type Photo = {
   src: string;
   caption?: string;
@@ -283,7 +286,7 @@ export const CONFIG = {
 
   /* ----------------------------------------------------------- VOICE NOTE */
   voiceNote: {
-    src: "/music/voice-note.mp3",
+    src: voiceNoteAsset.url,
     button: "There's something I wanted you to hear.",
     caption: "I LOVVVVVVEEEE YOUUUUU SOOOOO MUCH BABYYYYY , HAPPPIESTT BIRTHDAY 😘❤️ HONEY",
   },
