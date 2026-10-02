@@ -264,3 +264,26 @@
     transition-duration: 0.001ms !important;
   }
 }
+
+/* Vintage sunflower note */
+.aged-paper {
+  background:
+    radial-gradient(circle at 18% 22%, oklch(0.55 0.1 40 / 0.18), transparent 30%),
+    radial-gradient(circle at 82% 78%, oklch(0.6 0.09 60 / 0.2), transparent 35%),
+    radial-gradient(ellipse at center, oklch(0.93 0.035 80), oklch(0.84 0.05 70));
+  color: oklch(0.28 0.05 30);
+  box-shadow: inset 0 0 70px oklch(0.45 0.08 45 / 0.45), 0 30px 80px -20px oklch(0 0 0 / 0.8);
+}
+.paper-lines {
+  background-image: repeating-linear-gradient(transparent 0 2.15rem, oklch(0.5 0.06 40 / 0.18) 2.15rem calc(2.15rem + 1px));
+}
+.tape {
+  background: oklch(0.92 0.03 85 / 0.55);
+  box-shadow: 0 2px 6px oklch(0 0 0 / 0.25);
+}
+@keyframes sway { 0%,100% { transform: rotate(-4deg); } 50% { transform: rotate(4deg); } }
+.animate-sway { animation: sway 5s ease-in-out infinite; transform-origin: 70% 100%; }
+@keyframes petalFall {
+  0% { transform: translate(0,0) rotate(0deg); opacity: 1; }
+  100% { transform: translate(var(--dx, 40px), 340px) rotate(540deg); opacity: 0; }
+}
