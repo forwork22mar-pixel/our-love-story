@@ -45,9 +45,9 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-function Sunflower({ size = 150 }: { size?: number }) {
+function Sunflower({ size }: { size?: number }) {
   return (
-    <svg viewBox="0 0 100 140" width={size} height={size * 1.4} aria-hidden>
+    <svg viewBox="0 0 100 140" width={size ?? "100%"} height={size ? size * 1.4 : undefined} aria-hidden>
       <path d="M52 62 Q60 100 48 140" stroke="var(--sage)" strokeWidth="3" fill="none" />
       <path d="M54 95 Q75 85 80 100 Q65 106 54 95Z" fill="var(--sage)" />
       <path d="M50 115 Q28 105 22 118 Q38 124 50 115Z" fill="var(--sage)" />
@@ -92,7 +92,7 @@ function WhyIMadeThis() {
             className="absolute -right-6 -top-14 sm:-right-14 sm:-top-20"
           >
             <motion.div whileTap={{ scale: 0.92 }} className="animate-sway">
-              <Sunflower size={typeof window !== "undefined" && window.innerWidth < 640 ? 95 : 140} />
+              <div className="w-[95px] sm:w-[140px]"><Sunflower /></div>
             </motion.div>
             {bursts.map((id) =>
               Array.from({ length: 9 }).map((_, i) => (
