@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useCallback, useEffect, useState } from "react";
+import { motion } from "motion/react";
 import { CONFIG } from "@/config/experience";
 import { Atmosphere } from "@/components/experience/Atmosphere";
 import { Opening } from "@/components/experience/Opening";
@@ -44,16 +45,99 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
+function Sunflower({ size = 150 }: { size?: number }) {
+  return (
+    <svg viewBox="0 0 100 140" width={size} height={size * 1.4} aria-hidden>
+      <path d="M52 62 Q60 100 48 140" stroke="var(--sage)" strokeWidth="3" fill="none" />
+      <path d="M54 95 Q75 85 80 100 Q65 106 54 95Z" fill="var(--sage)" />
+      <path d="M50 115 Q28 105 22 118 Q38 124 50 115Z" fill="var(--sage)" />
+      {Array.from({ length: 14 }).map((_, i) => (
+        <ellipse key={i} cx="50" cy="22" rx="7" ry="18"
+          fill={i % 2 ? "var(--marigold)" : "var(--champagne)"}
+          transform={`rotate(${(i * 360) / 14} 50 45)`} />
+      ))}
+      <circle cx="50" cy="45" r="15" fill="oklch(0.3 0.06 40)" />
+      {Array.from({ length: 18 }).map((_, i) => (
+        <circle key={i} cx={50 + Math.cos(i * 2.4) * (i * 0.7)} cy={45 + Math.sin(i * 2.4) * (i * 0.7)} r="1.1" fill="var(--marigold)" opacity="0.7" />
+      ))}
+    </svg>
+  );
+}
+
 function WhyIMadeThis() {
+  const [bursts, setBursts] = useState<number[]>([]);
+  const pluck = () => {
+    const id = Date.now();
+    setBursts((b) => [...b, id]);
+    setTimeout(() => setBursts((b) => b.filter((x) => x !== id)), 3500);
+  };
   return (
     <Chapter id="why" index="01" eyebrow="Before anything else" title={CONFIG.why.title}>
-      <div className="mx-auto max-w-2xl space-y-8">
-        {CONFIG.why.paragraphs.map((p, i) => (
-          <Reveal key={i} delay={i * 0.15}>
-            <p className="text-base leading-loose text-muted-foreground sm:text-lg">{p}</p>
-          </Reveal>
-        ))}
-        <Divider />
+      <div className="mx-auto max-w-2xl" style={{ perspective: 1200 }}>
+        <motion.div
+          initial={{ rotateX: -55, opacity: 0, y: 40 }}
+          whileInView={{ rotateX: 0, opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 1.4, ease: [0.2, 0.8, 0.2, 1] }}
+          style={{ transformOrigin: "top center" }}
+          className="aged-paper relative rounded-sm px-7 pb-14 pt-16 sm:px-14"
+        >
+          <span className="tape absolute -top-3 left-8 h-7 w-24 -rotate-6" />
+          <span className="tape absolute -top-3 right-24 h-7 w-20 rotate-3 sm:right-32" />
+
+          <button
+            type="button"
+            onClick={pluck}
+            aria-label="Pluck the sunflower"
+            className="absolute -right-6 -top-14 sm:-right-14 sm:-top-20"
+          >
+            <motion.div whileTap={{ scale: 0.92 }} className="animate-sway">
+              <Sunflower size={typeof window !== "undefined" && window.innerWidth < 640 ? 95 : 140} />
+            </motion.div>
+            {bursts.map((id) =>
+              Array.from({ length: 9 }).map((_, i) => (
+                <span
+                  key={`${id}-${i}`}
+                  className="pointer-events-none absolute left-1/2 top-1/4 h-3 w-2 rounded-full"
+                  style={{
+                    background: i % 2 ? "var(--marigold)" : "var(--champagne)",
+                    ["--dx" as string]: `${(i - 4) * 22}px`,
+                    animation: `petalFall ${2 + (i % 4) * 0.4}s ease-in forwards`,
+                  }}
+                />
+              )),
+            )}
+          </button>
+
+          <div className="absolute -bottom-6 -left-4 -rotate-12 opacity-90">
+            <Sunflower size={55} />
+          </div>
+
+          <p className="font-hand text-2xl" style={{ color: "oklch(0.45 0.12 20)" }}>
+            a little note, for you 🌻
+          </p>
+          <div className="paper-lines mt-4 space-y-4 pr-4">
+            {CONFIG.why.paragraphs.map((p, i) => (
+              <motion.p
+                key={i}
+                initial={{ opacity: 0, x: -10 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 1 + i * 0.5, duration: 0.8 }}
+                className="font-hand text-2xl leading-[2.15rem] sm:text-[1.65rem]"
+              >
+                {p}
+              </motion.p>
+            ))}
+          </div>
+          <p className="font-hand mt-8 text-right text-2xl" style={{ color: "oklch(0.45 0.12 20)" }}>
+            — always yours ❤️
+          </p>
+          <p className="mt-4 text-center text-[10px] uppercase tracking-[0.3em] opacity-50">
+            psst… tap the sunflower
+          </p>
+        </motion.div>
+        <div className="mt-14"><Divider /></div>
       </div>
     </Chapter>
   );
