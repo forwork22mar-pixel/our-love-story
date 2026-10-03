@@ -68,9 +68,39 @@ export function RewardUnlock({
               />
               <p className="eyebrow text-champagne">{CONFIG.reward.unlockedTitle}</p>
 
-              <div className="glass relative mt-8 overflow-hidden rounded-2xl p-8 text-left shadow-[var(--shadow-cinematic)] sm:p-10">
-                <div className="absolute inset-x-0 top-0 h-px bg-[var(--gradient-rose)]" />
-                <h3 className="display text-3xl leading-snug text-blush sm:text-4xl">{CONFIG.reward.couponTitle}</h3>
+              {CONFIG.reward.images?.length > 0 && (
+  <div className="mb-10 grid grid-cols-1 gap-5 sm:grid-cols-2">
+    {CONFIG.reward.images.map((src, index) => (
+      <motion.div
+        key={src}
+        initial={{ opacity: 0, y: 20, scale: 0.96 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        transition={{
+          duration: 0.8,
+          delay: index * 0.15,
+          ease: [0.16, 1, 0.3, 1],
+        }}
+        className="group relative overflow-hidden rounded-2xl border border-white/10 bg-black/20 p-1 shadow-[0_20px_60px_rgba(0,0,0,0.35)]"
+      >
+        <div className="relative overflow-hidden rounded-xl">
+          <img
+            src={src}
+            alt={`Our reward memory ${index + 1}`}
+            className="aspect-[4/5] w-full object-cover transition duration-700 ease-out group-hover:scale-105"
+          />
+
+          {/* cinematic overlay */}
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-white/5" />
+
+          {/* subtle shine */}
+          <div className="pointer-events-none absolute inset-0 opacity-0 transition duration-700 group-hover:opacity-100">
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+          </div>
+        </div>
+      </motion.div>
+    ))}
+  </div>
+)}
                 <p className="mt-5 text-sm leading-relaxed text-foreground/80">{CONFIG.reward.couponBody}</p>
                 <div className="mt-8 flex items-center justify-between border-t border-dashed border-border pt-6">
                   <span className="eyebrow text-[0.55rem]">Redeem code</span>
