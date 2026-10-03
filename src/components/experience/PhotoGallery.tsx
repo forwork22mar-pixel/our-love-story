@@ -11,6 +11,9 @@ const shapeClass: Record<NonNullable<Photo["shape"]>, string> = {
   square: "sm:col-span-2 aspect-square",
 };
 
+const washiClass = ["washi-rose", "washi-blush", "washi-champagne"];
+const doodles = ["♡", "✶", "❀"];
+
 export function PhotoGallery() {
   const photos = CONFIG.photos;
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -58,13 +61,31 @@ export function PhotoGallery() {
             transition={{ duration: 1, delay: (i % 4) * 0.08, ease: [0.16, 1, 0.3, 1] }}
             style={{ rotate: `${p.tilt ?? 0}deg` }}
             className={cn(
-              "group relative block w-full overflow-hidden rounded-xl border border-border text-left shadow-[var(--shadow-cinematic)] transition-all duration-700",
+              "group relative block w-full rounded-xl border border-border text-left shadow-[var(--shadow-cinematic)] transition-all duration-700",
               "hover:z-10 hover:shadow-[0_0_70px_-18px_var(--rose)]",
               "aspect-[4/5]",
               shapeClass[p.shape ?? "square"],
               p.polaroid && "bg-paper p-2 pb-10",
             )}
           >
+            <span
+              aria-hidden
+              className={cn("washi", washiClass[i % 3])}
+              style={{ top: -11, left: "50%", transform: `translateX(-50%) rotate(${i % 2 === 0 ? -5 : 4}deg)`, zIndex: 2 }}
+            />
+            <span
+              aria-hidden
+              className="doodle text-blush"
+              style={{
+                right: 8,
+                top: 8,
+                fontSize: "1.15rem",
+                transform: `rotate(${i % 2 === 0 ? 12 : -10}deg)`,
+                zIndex: 2,
+              }}
+            >
+              {doodles[i % 3]}
+            </span>
             <div className={cn("h-full w-full overflow-hidden", p.polaroid ? "rounded-sm" : "rounded-xl")}>
               <SmartImage
                 src={p.src}
@@ -74,7 +95,7 @@ export function PhotoGallery() {
             </div>
 
             {p.polaroid ? (
-              <span className="absolute bottom-3 left-0 right-0 text-center font-display text-sm text-paper-foreground">
+              <span className="absolute bottom-2 left-0 right-0 text-center font-hand text-xl text-paper-foreground">
                 {p.caption}
               </span>
             ) : (

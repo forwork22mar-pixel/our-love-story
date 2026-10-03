@@ -287,3 +287,24 @@
   0% { transform: translate(0,0) rotate(0deg); opacity: 1; }
   100% { transform: translate(var(--dx, 40px), 340px) rotate(540deg); opacity: 0; }
 }
+
+/* Scrapbook washi tape + doodles */
+.washi {
+  position: absolute;
+  width: 6.5rem;
+  height: 1.55rem;
+  background-image: repeating-linear-gradient(45deg, oklch(1 0 0 / 0.16) 0 6px, transparent 6px 12px);
+  box-shadow: 0 2px 8px oklch(0 0 0 / 0.35);
+  opacity: 0.92;
+  pointer-events: none;
+}
+.washi-rose { background-color: color-mix(in oklab, var(--rose) 48%, transparent); }
+.washi-blush { background-color: color-mix(in oklab, var(--blush) 42%, transparent); }
+.washi-champagne { background-color: color-mix(in oklab, var(--champagne) 40%, transparent); }
+.doodle {
+  position: absolute;
+  font-family: var(--font-hand);
+  line-height: 1;
+  pointer-events: none;
+  text-shadow: 0 0 14px color-mix(in oklab, var(--rose) 45%, transparent);
+}
