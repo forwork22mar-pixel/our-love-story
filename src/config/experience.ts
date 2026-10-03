@@ -296,9 +296,13 @@ export const CONFIG = {
     lockedTitle: "REWARD LOCKED",
     lockedNote: "Complete our little journey to unlock this.",
     unlockedTitle: "REWARD UNLOCKED ❤",
-    couponTitle: "[REWARD TITLE — e.g. One date night, my treat.]",
-    couponBody: "[REWARD DETAILS — redeemable any time, no expiry.]",
-    couponCode: "[FOREVER-01]",
+    couponTitle: "Unlimited KISSES and HUGS Coupoun Card ..😘😋😋",
+    image: "/images/reward1.jpg",
+    image: "/images/reward2.jpg",
+
+    couponBody: "Redeemable any time, no expiry",
+    couponCode: "FOREVER-0418",
+    
   },
 
   /* ---------------------------------------------------------------- FINAL */
