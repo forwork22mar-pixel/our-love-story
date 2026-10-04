@@ -231,12 +231,12 @@ export const CONFIG = {
     questions: [
       { question: "When did your lips touched My cheeks for the first Time😘 ?", options: ["At the flat 🤭", "Lodhi garden💕", "The mall😍"], answerIndex: 1 },
       { question: "What was my respose to your confession🫣", options: ["Fuckkkk'😮", "Areh dada💕", "I like you to😍"], answerIndex: 1 },
-      { question: 'Who said "I LOVE YOUUU❤️ " first?', options: ["Me", "You", "Neither of us remembers"], answerIndex: 0 },
-      { question: "How doy you like me the most in ?", options: ["Bald", "long Hairs", "Short hairs"], answerIndex: 0 },
+      { question: 'Who said "I LOVE YOUUU❤️ " first?', options: ["Me (Suri)🥰", "You( Arti)🤭", "Neither of us remembers😒"], answerIndex: 0 },
+      { question: "How do you like me the most in ?", options: ["Bald🤔", "long Hairs😎", "Short hairs😝"], answerIndex: 0 },
       { question: "What dish I love to call you?", options: ["Bundi ke Ladoo😝", "Rasgulla🫣 ", "Rasmalai🤤"], answerIndex: 2 },
-      { question: "When did I insited the first kiss?", options: ["On the couch", "After the didi call", "In the lift"], answerIndex: 1 },
+      { question: "When did I insited the first kiss?", options: ["On the couch🤭", "After the didi call💕", "In the lift"😏], answerIndex: 1 },
       { question: "Which song i uploaded on our fisrt story?", options: ["Mein tera Mein tera❤️ ", "You are my soniyo💕", "I like me Better🤭"], answerIndex: 0 },
-      { question: "What song it was when you were in my story for the fisrt time?", options: ["I found Her", "Yeh fitoor Mera", "Meri banogi kya"], answerIndex: 1 },
+      { question: "What song it was when you were in my story for the fisrt time?", options: ["I found Her😭", "Yeh fitoor Mera😍", "Meri banogi kya💕"], answerIndex: 1 },
     ] as QuizQuestion[],
     correct: "YOU REMEMBERED ❤",
     wrong: "Close… but I remember it differently 😌",
@@ -254,10 +254,10 @@ export const CONFIG = {
 
   /* ----------------------------------------------------- HIDDEN SURPRISES */
   hidden: [
-    { label: "A hidden photo", message: "[SECRET MESSAGE]", image: "/images/secret1.jpg" },
-    { label: "An inside joke", message: "[INSIDE JOKE]" },
-    { label: "Something I never said out loud", message: "[SECRET MESSAGE]" },
-    { label: "A tiny clip", message: "[SECRET MESSAGE]", video: "/videos/secret.mp4" },
+    { label: "Fav Click", message: " Your Favorite Click😭🤭", image: "/images/secret1.jpg" },
+    { label: "An inside joke", message: "Uhhhh maybe a person  SAGAR MUNDE😂😂🤣 (The name is enough 😂🤣) " },
+    { label: "Something I never said out loud", message: "YOU ARE THE FUCKING BEST GURLLLL IN LIFE , I COULD EVER THINK OF ..😘😭😭" },
+    { label: "A tiny clip", message: "Something just random..😘🤭", video: "/videos/secret12.mp4" },
   ] as HiddenSurprise[],
 
   /* --------------------------------------------------------------- LETTER */
@@ -267,7 +267,7 @@ export const CONFIG = {
   teaser: "I wrote this instead of trying to say it all.",
   greeting: "Dear Baby,",
   body: [
-    "My baby,",
+    "My baby🥰,",
     "I don't know if I can fit everything I feel into one page — but here's the attempt.",
     "I don't even know where to start because there is so much I want to say to you...",
     "You have made my life so much more beautiful just by being a part of it.",
@@ -281,7 +281,7 @@ export const CONFIG = {
     "Happy Birthday, my love. This little world I made for you is just a small way of showing you how much you mean to me.",
     "Always yours ❤️",
   ],
-  signature: "— [YOUR HUBBY (SURI)]",
+  signature: "—  SURI💕",
 },
 
   /* ----------------------------------------------------------- VOICE NOTE */
