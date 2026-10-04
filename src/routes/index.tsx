@@ -236,32 +236,57 @@ function Index() {
         )}
       </div>
 
-      <section className="relative mx-auto max-w-6xl px-6 py-20 sm:py-28">
-        <Reveal>
-          <p className="eyebrow text-center">a few flowers for you</p>
-          <h2 className="display mt-3 text-center text-4xl sm:text-5xl">Every bloom, for you</h2>
-        </Reveal>
-        <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-3 sm:items-center">
-          {[
-  bouquetSketch,
-  "/images/bouquet-neon.png",
-  "/images/bouquet-photo.png",
-].map((src, i) => (
-            <Reveal key={i} delay={i * 0.15}>
-              <img
-                src={src}
-                alt="A bouquet of flowers"
-                loading="lazy"
-                className={`mx-auto w-full max-w-xs object-cover transition-transform duration-700 hover:scale-105 ${i === 1 ? "sm:-translate-y-6" : ""}`}
-                style={{
-                  maskImage: "radial-gradient(ellipse at center, black 50%, transparent 75%)",
-                  WebkitMaskImage: "radial-gradient(ellipse at center, black 50%, transparent 75%)",
-                }}
-              />
-            </Reveal>
-          ))}
-        </div>
-      </section>
+      <section className="relative mx-auto max-w-6xl px-6 py-24 sm:py-32">
+  <Reveal>
+    <p className="eyebrow text-center">a few flowers for you</p>
+
+    <h2 className="display mt-3 text-center text-4xl sm:text-5xl">
+      Every bloom, for you
+    </h2>
+
+    <p className="mx-auto mt-5 max-w-xl text-center text-sm leading-7 text-muted-foreground">
+      Some flowers fade with time. These ones are here to remind you
+      how beautiful you make everything around you.
+    </p>
+  </Reveal>
+
+  <div className="relative mt-16 min-h-[420px] sm:min-h-[500px]">
+
+    {/* Left bouquet */}
+    <Reveal delay={0.15}>
+      <div className="absolute left-0 top-10 w-[42%] max-w-sm sm:left-4 sm:w-[30%]">
+        <img
+          src={bouquetSketch}
+          alt="Bouquet for Arti"
+          className="mx-auto w-full object-contain"
+        />
+      </div>
+    </Reveal>
+
+    {/* Center bouquet */}
+    <Reveal delay={0.3}>
+      <div className="absolute left-1/2 top-0 w-[58%] max-w-md -translate-x-1/2">
+        <img
+          src="/images/bouquet-neon.png"
+          alt="Neon bouquet for Arti"
+          className="mx-auto w-full object-contain drop-shadow-[0_0_35px_var(--rose)]"
+        />
+      </div>
+    </Reveal>
+
+    {/* Right bouquet */}
+    <Reveal delay={0.45}>
+      <div className="absolute right-0 top-14 w-[42%] max-w-sm sm:right-4 sm:w-[30%]">
+        <img
+          src="/images/bouquet-photo.png"
+          alt="Bouquet for Arti"
+          className="mx-auto w-full object-contain"
+        />
+      </div>
+    </Reveal>
+
+  </div>
+</section>
 
       <div className="relative">
         <LoveLetter />
