@@ -78,8 +78,7 @@ function Bouquet() {
   return (
     <motion.svg
       viewBox="0 0 180 112"
-      className="absolute left-1/2 top-[79%] z-10 w-[72%] -translate-x-1/2 overflow-visible drop-shadow-[0_10px_18px_var(--ink)]"
-      aria-label="A bouquet of lilies, sunflowers, and roses"
+      className="absolute left-1/2 top-[84%] z-10 w-[52%] max-w-[220px] -translate-x-1/2 overflow-visible drop-shadow-[0_10px_18px_var(--ink)]"
       initial={{ opacity: 0, scale: 0.7, y: 20 }}
       whileInView={{ opacity: 1, scale: 1, y: 0 }}
       viewport={{ once: true }}
@@ -236,7 +235,7 @@ function WordHeart() {
   const heartRef = useRef<HTMLDivElement>(null);
   const isForming = useInView(heartRef, { once: true, amount: 0.25 });
   return (
-    <div ref={heartRef} className="relative mx-auto mb-28 w-full max-w-md sm:mb-32">
+    <div ref={heartRef} className="relative mx-auto mb-40 w-full max-w-md sm:mb-44">
       <FallingLove active={isForming} />
       <svg viewBox="0 0 100 100" className="w-full drop-shadow-[0_0_30px_var(--rose)]">
         <defs><clipPath id="heart-clip"><path d={HEART_PATH} /></clipPath></defs>
