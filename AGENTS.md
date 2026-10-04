@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep opening-screen presentation and entry transitions in the existing Opening component; this isolates visual updates from story chapter state.
