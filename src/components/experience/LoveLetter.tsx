@@ -73,55 +73,40 @@ function FallingLove({ active }: { active: boolean }) {
 }
 
 function Bouquet() {
-  const petals = [0, 72, 144, 216, 288];
-  const sunflowerPetals = Array.from({ length: 12 }, (_, i) => i * 30);
   return (
-    <motion.svg
-      viewBox="0 0 180 112"
-      className="absolute left-1/2 top-[79%] z-10 w-[72%] -translate-x-1/2 overflow-visible drop-shadow-[0_10px_18px_var(--ink)]"
-      aria-label="A bouquet of lilies, sunflowers, and roses"
-      initial={{ opacity: 0, scale: 0.7, y: 20 }}
-      whileInView={{ opacity: 1, scale: 1, y: 0 }}
+    <motion.div
+      className="absolute left-1/2 top-[76%] z-10 flex w-[82%] -translate-x-1/2 items-end justify-center gap-3 sm:w-[72%] sm:gap-5"
+      initial={{ opacity: 0, y: 30, scale: 0.85 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: true }}
-      transition={{ delay: 3.6, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+      transition={{
+        delay: 2.8,
+        duration: 1.2,
+        ease: [0.16, 1, 0.3, 1],
+      }}
     >
-      <g fill="none" stroke="var(--sage)" strokeWidth="2">
-        <path d="M90 106 Q70 70 39 28" /><path d="M90 106 Q79 59 71 21" />
-        <path d="M90 106 Q101 58 111 18" /><path d="M90 106 Q119 72 143 31" />
-        <path d="M90 106 Q90 63 91 13" />
-      </g>
-      <g fill="var(--sage)" opacity=".9">
-        <path d="M78 76 Q54 66 50 51 Q72 55 82 70Z" /><path d="M100 79 Q124 65 131 51 Q108 55 96 71Z" />
-      </g>
+      <motion.img
+        src="/images/bouquet-neon.png"
+        alt="Neon bouquet"
+        className="w-[48%] object-contain drop-shadow-[0_10px_25px_var(--rose)]"
+        initial={{ opacity: 0, x: -30, rotate: -6 }}
+        whileInView={{ opacity: 1, x: 0, rotate: -3 }}
+        viewport={{ once: true }}
+        transition={{ delay: 3.1, duration: 1 }}
+      />
 
-      {[{ x: 42, y: 29, r: -18 }, { x: 139, y: 31, r: 20 }].map((flower, fi) => (
-        <motion.g key={fi} style={{ transformOrigin: `${flower.x}px ${flower.y}px` }} initial={{ scale: 0 }} whileInView={{ scale: 1 }} viewport={{ once: true }} transition={{ delay: 4 + fi * 0.25, duration: 0.9 }}>
-          <g transform={`translate(${flower.x} ${flower.y}) rotate(${flower.r})`}>
-            {sunflowerPetals.map((r) => <ellipse key={r} cx="0" cy="-11" rx="4.2" ry="10" fill="var(--champagne)" transform={`rotate(${r})`} />)}
-            <circle r="7" fill="var(--burgundy)" /><circle r="3.5" fill="var(--ink)" opacity=".8" />
-          </g>
-        </motion.g>
-      ))}
-
-      {[{ x: 70, y: 23 }, { x: 111, y: 20 }].map((flower, fi) => (
-        <motion.g key={fi} style={{ transformOrigin: `${flower.x}px ${flower.y}px` }} initial={{ scale: 0, rotate: -20 }} whileInView={{ scale: 1, rotate: 0 }} viewport={{ once: true }} transition={{ delay: 4.25 + fi * 0.2, duration: 1 }}>
-          {petals.map((r) => <path key={r} d={`M${flower.x} ${flower.y} Q${flower.x - 7} ${flower.y - 15} ${flower.x} ${flower.y - 25} Q${flower.x + 7} ${flower.y - 15} ${flower.x} ${flower.y}Z`} fill="var(--blush)" stroke="var(--rose)" strokeWidth=".7" transform={`rotate(${r} ${flower.x} ${flower.y})`} />)}
-          <circle cx={flower.x} cy={flower.y} r="3" fill="var(--champagne)" />
-        </motion.g>
-      ))}
-
-      {[{ x: 91, y: 19 }, { x: 58, y: 49 }, { x: 122, y: 49 }].map((rose, ri) => (
-        <motion.g key={ri} style={{ transformOrigin: `${rose.x}px ${rose.y}px` }} initial={{ scale: 0 }} whileInView={{ scale: 1 }} viewport={{ once: true }} transition={{ delay: 4.5 + ri * 0.16, duration: 0.8 }}>
-          <circle cx={rose.x} cy={rose.y} r="11" fill="var(--rose)" />
-          <path d={`M${rose.x - 7} ${rose.y} Q${rose.x} ${rose.y - 10} ${rose.x + 7} ${rose.y} Q${rose.x} ${rose.y + 9} ${rose.x - 5} ${rose.y + 2} Q${rose.x} ${rose.y - 5} ${rose.x + 4} ${rose.y + 1}`} fill="none" stroke="var(--blush)" strokeWidth="1.3" />
-        </motion.g>
-      ))}
-      <path d="M73 91 Q90 101 107 91 L101 109 Q90 104 79 109Z" fill="var(--burgundy)" />
-      <path d="M90 99 Q78 87 70 96 Q79 105 90 100 Q102 105 111 96 Q102 87 90 99Z" fill="var(--rose)" />
-    </motion.svg>
+      <motion.img
+        src="/images/bouquet-photo.png"
+        alt="Bouquet for you"
+        className="w-[48%] object-contain drop-shadow-[0_10px_25px_var(--rose)]"
+        initial={{ opacity: 0, x: 30, rotate: 6 }}
+        whileInView={{ opacity: 1, x: 0, rotate: 3 }}
+        viewport={{ once: true }}
+        transition={{ delay: 3.35, duration: 1 }}
+      />
+    </motion.div>
   );
 }
-
 function WordHeart() {
   const words = CONFIG.letter.heartWords;
   const heartRef = useRef<HTMLDivElement>(null);
