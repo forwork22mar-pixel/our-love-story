@@ -21,6 +21,8 @@ import { Chapter, Divider, Reveal } from "@/components/experience/ui";
 import bouquetSketch from "@/assets/bouquet-sketch.jpg";
 import bouquetNeon from "@/assets/bouquet-neon.png.asset.json";
 import bouquetPhoto from "@/assets/bouquet-photo.png.asset.json";
+import whyBirthdayPaper from "@/assets/why-birthday-paper.jpg";
+import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -80,19 +82,22 @@ function WhyIMadeThis() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 1.4, ease: [0.2, 0.8, 0.2, 1] }}
           style={{ transformOrigin: "top center" }}
-          className="aged-paper relative rounded-sm px-7 pb-14 pt-16 sm:px-14"
+          className="why-birthday-note relative px-9 pb-20 pt-12 sm:px-16 sm:pb-24 sm:pt-16"
         >
-          <span className="tape absolute -top-3 left-8 h-7 w-24 -rotate-6" />
-          <span className="tape absolute -top-3 right-24 h-7 w-20 rotate-3 sm:right-32" />
+          <img src={whyBirthdayPaper} alt="" aria-hidden loading="lazy" width={1024} height={1536} className="pointer-events-none absolute inset-0 h-full w-full" />
+          <div className="relative">
+            <p className="why-birthday-heading">HAPPY<span>Birthday</span></p>
 
-          <button
+          <Button
             type="button"
+            variant="ghost"
             onClick={pluck}
             aria-label="Pluck the sunflower"
-            className="absolute -right-6 -top-14 sm:-right-14 sm:-top-20"
+            title="A little sunflower for you"
+            className="why-note-flower absolute -bottom-16 -left-7 h-auto p-0 sm:-left-12 [&_svg]:size-auto"
           >
             <motion.div whileTap={{ scale: 0.92 }} className="animate-sway">
-              <div className="w-[95px] sm:w-[140px]"><Sunflower /></div>
+              <div className="w-[55px] sm:w-[75px]"><Sunflower /></div>
             </motion.div>
             {bursts.map((id) =>
               Array.from({ length: 9 }).map((_, i) => (
@@ -107,16 +112,12 @@ function WhyIMadeThis() {
                 />
               )),
             )}
-          </button>
+          </Button>
 
-          <div className="absolute -bottom-6 -left-4 -rotate-12 opacity-90">
-            <Sunflower size={55} />
-          </div>
-
-          <p className="font-hand text-2xl" style={{ color: "oklch(0.45 0.12 20)" }}>
-            a little note, for you 🌻
+          <p className="why-note-salutation font-hand">
+            a little note, just for you ♡
           </p>
-          <div className="paper-lines mt-4 space-y-4 pr-4">
+          <div className="why-note-copy mt-6 space-y-6">
             {CONFIG.why.paragraphs.map((p, i) => (
               <motion.p
                 key={i}
@@ -124,18 +125,16 @@ function WhyIMadeThis() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 1 + i * 0.5, duration: 0.8 }}
-                className="font-hand text-2xl leading-[2.15rem] sm:text-[1.65rem]"
+                className="font-hand"
               >
                 {p}
               </motion.p>
             ))}
           </div>
-          <p className="font-hand mt-8 text-right text-2xl" style={{ color: "oklch(0.45 0.12 20)" }}>
+          <p className="why-note-signature font-hand mt-8 text-right">
             — always yours ❤️
           </p>
-          <p className="mt-4 text-center text-[10px] uppercase tracking-[0.3em] opacity-50">
-            psst… tap the sunflower
-          </p>
+          </div>
         </motion.div>
         <div className="mt-14"><Divider /></div>
       </div>
