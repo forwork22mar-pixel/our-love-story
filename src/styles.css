@@ -324,13 +324,13 @@
 .birthday-opening::after { z-index: 0; opacity: 0.5; }
 .birthday-composition { min-height: 530px; height: 65svh; max-height: 850px; }
 .birthday-type { font-size: 150px; line-height: 1; letter-spacing: 0; }
-.birthday-portrait { height: 74%; width: auto; max-width: 52%; object-fit: contain; transform: translateX(-50%); filter: var(--birthday-sticker-shadow); }
+.birthday-portrait { height: 74%; width: auto; max-width: 52%; object-fit: contain; translate: -50% 0; filter: var(--birthday-sticker-shadow); }
 .birthday-bow { font-family: var(--font-display); font-size: 90px; line-height: 1; transform: rotate(12deg); }
 .birthday-footer { background: var(--birthday-paper); border-top: 1px solid color-mix(in oklab, var(--burgundy) 15%, transparent); }
 @media (max-width: 639px) {
   .birthday-composition { min-height: 440px; height: 61svh; max-height: 610px; }
   .birthday-type { font-size: 76px; }
   .birthday-portrait { height: 69%; max-width: 60%; }
-  .birthday-bow { font-size: 62px; right: 7%; top: 36%; }
+  .birthday-bow { font-size: 62px; right: 7%; top: 32%; }
 }
 @media (max-width: 359px) { .birthday-type { font-size: 64px; } }
