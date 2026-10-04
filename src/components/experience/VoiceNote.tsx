@@ -52,12 +52,14 @@ export function VoiceNote() {
         </p>
 
         <audio
-          ref={ref}
-          src={CONFIG.voiceNote.src}
-          preload="none"
-          onEnded={() => setPlaying(false)}
-          onError={() => setMissing(true)}
-        />
+  ref={ref}
+  src={CONFIG.voiceNote.src}
+  preload="metadata"
+  onLoadedData={() => setMissing(false)}
+  onCanPlay={() => setMissing(false)}
+  onEnded={() => setPlaying(false)}
+  onError={() => setMissing(true)}
+/>
       </Reveal>
     </section>
   );
