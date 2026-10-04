@@ -72,41 +72,7 @@ function FallingLove({ active }: { active: boolean }) {
   );
 }
 
-function Bouquet() {
-  return (
-    <motion.div
-      className="absolute left-1/2 top-[76%] z-10 flex w-[82%] -translate-x-1/2 items-end justify-center gap-3 sm:w-[72%] sm:gap-5"
-      initial={{ opacity: 0, y: 30, scale: 0.85 }}
-      whileInView={{ opacity: 1, y: 0, scale: 1 }}
-      viewport={{ once: true }}
-      transition={{
-        delay: 2.8,
-        duration: 1.2,
-        ease: [0.16, 1, 0.3, 1],
-      }}
-    >
-      <motion.img
-        src="/images/bouquet-neon.png"
-        alt="Neon bouquet"
-        className="w-[48%] object-contain drop-shadow-[0_10px_25px_var(--rose)]"
-        initial={{ opacity: 0, x: -30, rotate: -6 }}
-        whileInView={{ opacity: 1, x: 0, rotate: -3 }}
-        viewport={{ once: true }}
-        transition={{ delay: 3.1, duration: 1 }}
-      />
 
-      <motion.img
-        src="/images/bouquet-photo.png"
-        alt="Bouquet for you"
-        className="w-[48%] object-contain drop-shadow-[0_10px_25px_var(--rose)]"
-        initial={{ opacity: 0, x: 30, rotate: 6 }}
-        whileInView={{ opacity: 1, x: 0, rotate: 3 }}
-        viewport={{ once: true }}
-        transition={{ delay: 3.35, duration: 1 }}
-      />
-    </motion.div>
-  );
-}
 function WordHeart() {
   const words = CONFIG.letter.heartWords;
   const heartRef = useRef<HTMLDivElement>(null);
@@ -141,7 +107,7 @@ function WordHeart() {
       </svg>
       <Lily side="left" />
       <Lily side="right" />
-      <Bouquet />
+      
     </div>
   );
 }
