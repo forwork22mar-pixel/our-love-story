@@ -169,10 +169,10 @@ export const CONFIG = {
 
 { 
   id: "random2", 
-  type: "RANDOM MOMENT", 
-  title: "YOUR TITLE HERE", 
-  date: "YOUR DATE HERE", 
-  description: "YOUR DESCRIPTION HERE", 
+  type: "RANDOM CLICKKK", 
+  title: "Just a random click (First pic together on my stroy🥰🤭🤭 )", 
+  date: "20th MAY 2026", 
+  description: "Our first little picture together. ❤️ , Our first little picture together. ❤️I didn't know it then, but this picture was going to become the beginning of so many beautiful memories. And honestly… I’m so glad it was you standing beside me. 🥹🫶", 
   image: "/images/random.jpg.png", 
   icon: "◎", 
   x: -75, 
@@ -253,10 +253,10 @@ export const CONFIG = {
 
   /* ----------------------------------------------------- HIDDEN SURPRISES */
   hidden: [
-    { label: "Fav Click", message: " Your Favorite Click😭🤭", image: "/images/secret1.jpg" },
+    { label: "Fav Click", message: " Out of all the pictures, somehow this one just feels different. ❤️ Maybe it’s the smile, maybe it’s the moment, or maybe it’s simply you. This is one of those clicks I can look at a hundred times and still smile. 🥹 Definitely one of my favourite pictures of my favourite girl. 🫶", image: "/images/secret1.jpg" },
     { label: "An inside joke", message: "Uhhhh maybe a person  SAGAR MUNDE😂😂🤣 (The name is enough 😂🤣) " },
-    { label: "Something I never said out loud", message: "YOU ARE THE FUCKING BEST GURLLLL IN LIFE , I COULD EVER THINK OF ..😘😭😭" },
-    { label: "A tiny clip", message: "Something just random..😘🤭", video: "/videos/secret12.mp4" },
+    { label: "Something I never said out loud", message: "YOU ARE THE BEST  FUCKINGGGGGGG GURLLLL IN  MY LIFE..,I don't say it enough, but you mean more to me than you'll ever know. ❤️ Somewhere along the way, you became such an important part of my life, and honestly, I never want to imagine my days without you in them. 🥹🫶" },
+    { label: "A tiny clip", message: "Something just random..😘🤭", video: "/secret12.mp4" },
   ] as HiddenSurprise[],
 
   /* --------------------------------------------------------------- LETTER */
