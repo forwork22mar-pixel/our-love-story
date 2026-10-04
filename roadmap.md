@@ -4,4 +4,4 @@
 - [x] Verify heart word spacing after last KIND SOUL / MY CALM tweak
 - [x] Add scrapbook/collage frames (washi tape, doodles, handwritten captions) to PhotoGallery + VideoGallery
 - [x] Refresh the opening with the birthday collage reference and Arti's new yellow-sari portrait
-- [ ] Verify the new opening and entry button on desktop and mobile
+- [x] Verify the new opening and entry button on desktop and mobile

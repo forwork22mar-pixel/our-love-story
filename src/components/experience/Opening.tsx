@@ -47,8 +47,8 @@ export function Opening({ onEnter }: { onEnter: () => void }) {
         />
 
         <span aria-hidden="true" className="birthday-bow absolute right-[13%] top-[36%] z-20 text-burgundy">୨୧</span>
-        <span aria-hidden="true" className="absolute bottom-[25%] left-[8%] -rotate-12 font-hand text-3xl text-burgundy sm:left-[19%] sm:text-5xl">my favorite<br />person.</span>
-        <span aria-hidden="true" className="absolute bottom-[18%] right-[7%] rotate-12 font-hand text-3xl text-burgundy sm:right-[18%] sm:text-5xl">all my love<br />is yours ♡</span>
+        <span aria-hidden="true" className="birthday-side-note absolute bottom-[25%] left-[4%] -rotate-12 font-hand text-2xl text-burgundy sm:left-[19%] sm:text-5xl">my favorite<br />person.</span>
+        <span aria-hidden="true" className="birthday-side-note absolute bottom-[18%] right-[3%] rotate-12 font-hand text-2xl text-burgundy sm:right-[18%] sm:text-5xl">all my love<br />is yours ♡</span>
         <Button
           variant="ghost" size="icon" aria-label="Send Arti birthday hearts" title="A little love for Arti"
           className="birthday-heart absolute left-[9%] top-[38%] z-20 h-16 w-16 rounded-full text-5xl text-burgundy hover:bg-burgundy/10 sm:left-[17%]"
