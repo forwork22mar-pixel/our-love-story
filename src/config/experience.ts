@@ -234,7 +234,7 @@ export const CONFIG = {
       { question: 'Who said "I LOVE YOUUU❤️ " first?', options: ["Me (Suri)🥰", "You( Arti)🤭", "Neither of us remembers😒"], answerIndex: 0 },
       { question: "How do you like me the most in ?", options: ["Bald🤔", "long Hairs😎", "Short hairs😝"], answerIndex: 0 },
       { question: "What dish I love to call you?", options: ["Bundi ke Ladoo😝", "Rasgulla🫣 ", "Rasmalai🤤"], answerIndex: 2 },
-      { question: "When did I insited the first kiss?", options: ["On the couch🤭", "After the didi call💕", "In the lift"😏], answerIndex: 1 },
+      { question: "When did I insited the first kiss?", options: ["On the couch🤭", "After the didi call💕", "In the lift😏"], answerIndex: 1 },
       { question: "Which song i uploaded on our fisrt story?", options: ["Mein tera Mein tera❤️ ", "You are my soniyo💕", "I like me Better🤭"], answerIndex: 0 },
       { question: "What song it was when you were in my story for the fisrt time?", options: ["I found Her😭", "Yeh fitoor Mera😍", "Meri banogi kya💕"], answerIndex: 1 },
     ] as QuizQuestion[],
