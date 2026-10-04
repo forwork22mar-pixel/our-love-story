@@ -265,6 +265,49 @@
   }
 }
 
+/* Birthday stationery for the introductory note. */
+:root {
+  --note-ink: oklch(0.32 0.09 18);
+  --note-heading: oklch(0.39 0.12 18);
+}
+.why-birthday-note {
+  color: var(--note-ink);
+  min-height: 740px;
+  box-shadow: var(--shadow-cinematic);
+  letter-spacing: 0;
+}
+.why-birthday-heading {
+  width: 65%;
+  font-family: var(--font-display);
+  font-size: 66px;
+  font-weight: 600;
+  line-height: 0.95;
+  color: var(--note-heading);
+}
+.why-birthday-heading span {
+  display: block;
+  font-size: 54px;
+  font-style: italic;
+  font-weight: 400;
+  margin-top: 8px;
+}
+.why-note-salutation { margin-top: 65px; font-size: 32px; line-height: 1.2; }
+.why-note-copy { font-size: 28px; line-height: 1.55; font-weight: 500; overflow-wrap: anywhere; }
+.why-note-signature { font-size: 32px; line-height: 1.3; }
+.why-note-flower:hover { background: transparent; color: inherit; }
+@media (max-width: 639px) {
+  .why-birthday-note {
+    min-height: 680px;
+    border-image: url("./assets/why-birthday-paper.jpg") 320 80 100 80 fill / 125px 22px 45px 22px stretch;
+  }
+  .why-birthday-note > img { display: none; }
+  .why-birthday-heading { font-size: 43px; }
+  .why-birthday-heading span { font-size: 36px; }
+  .why-note-salutation { margin-top: 58px; font-size: 28px; }
+  .why-note-copy { font-size: 25px; line-height: 1.45; }
+  .why-note-signature { font-size: 28px; }
+}
+
 /* Vintage sunflower note */
 .aged-paper {
   background:
