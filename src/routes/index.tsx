@@ -19,8 +19,7 @@ import { RewardUnlock } from "@/components/experience/RewardUnlock";
 import { MusicPlayer } from "@/components/experience/MusicPlayer";
 import { Chapter, Divider, Reveal } from "@/components/experience/ui";
 import bouquetSketch from "@/assets/bouquet-sketch.jpg";
-import bouquetNeon from "@/assets/bouquet-neon.png.asset.json";
-import bouquetPhoto from "@/assets/bouquet-photo.png.asset.json";
+
 import whyBirthdayPaper from "@/assets/why-birthday-paper.jpg";
 import { Button } from "@/components/ui/button";
 
@@ -243,7 +242,11 @@ function Index() {
           <h2 className="display mt-3 text-center text-4xl sm:text-5xl">Every bloom, for you</h2>
         </Reveal>
         <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-3 sm:items-center">
-          {[bouquetSketch, bouquetNeon.url, bouquetPhoto.url].map((src, i) => (
+          {[
+  bouquetSketch,
+  "/images/bouquet-neon.png",
+  "/images/bouquet-photo.png",
+].map((src, i) => (
             <Reveal key={i} delay={i * 0.15}>
               <img
                 src={src}
