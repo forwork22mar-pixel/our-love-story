@@ -273,7 +273,17 @@ function Index() {
         />
       </div>
     </Reveal>
-
+   
+    {/* Right bouquet */}
+<Reveal delay={0.45}>
+  <div className="absolute right-0 top-14 w-[42%] max-w-sm sm:right-4 sm:w-[30%]">
+    <img
+      src="/images/bouquet-photo.png"
+      alt="Bouquet for Arti"
+      className="mx-auto w-full object-contain"
+    />
+  </div>
+</Reveal>
     
 
   </div>
